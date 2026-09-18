@@ -1,0 +1,73 @@
+import React, { useEffect, useState } from 'react';
+import { initLenis } from './lib/lenis';
+import { CustomCursor } from './components/CustomCursor';
+import { Preloader } from './components/Preloader';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Marquee } from './components/Marquee';
+import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
+import { Services } from './components/Services';
+import { WhyMe } from './components/WhyMe';
+import { Achievements } from './components/Achievements';
+import { MediaChannels } from './components/MediaChannels';
+import { Testimonials } from './components/Testimonials';
+import { Contact } from './components/Contact';
+import { FinalCTA } from './components/FinalCTA';
+import { Footer } from './components/Footer';
+
+export const App: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const lenis = initLenis();
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="relative min-h-screen bg-[#08080a] text-[#f4f4f6] selection:bg-[#e2c392] selection:text-[#08080a]">
+      {/* Preloader */}
+      {loading && <Preloader onComplete={() => setLoading(false)} />}
+
+      {/* Custom Interactive Cursor */}
+      <CustomCursor />
+
+      {/* Sticky Navigation Header */}
+      <Navbar onNavClick={scrollToSection} />
+
+      {/* Main Content Layout */}
+      <main className="relative">
+        <Hero
+          onConnectClick={() => scrollToSection('contact')}
+          onWorkClick={() => scrollToSection('work')}
+        />
+        <About />
+        <Marquee />
+        <Projects />
+        <Skills />
+        <Services />
+        <WhyMe />
+        <Achievements />
+        <MediaChannels />
+        <Testimonials />
+        <Contact />
+        <FinalCTA onConnectClick={() => scrollToSection('contact')} />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
