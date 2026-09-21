@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, YoutubeIcon } from './Icons';
 
 export const Contact: React.FC = () => {
@@ -22,81 +22,91 @@ export const Contact: React.FC = () => {
     <section id="contact" className="py-28 bg-[#08080a] text-[#f4f4f6] px-6 md:px-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Text & Contact Channels */}
+          {/* Left Text & Verified Contact Channels */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-mono text-[#e2c392] tracking-widest uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#e2c392]" />
-                GET IN TOUCH
+                DIRECT CONTACT & CONNECTIVITY
               </div>
               <h2 className="text-3xl md:text-5xl font-bold font-syne tracking-tight text-white leading-tight">
                 Have an integration <br />
                 challenge? <span className="text-gold-gradient">Let's solve it.</span>
               </h2>
               <p className="text-sm md:text-base text-[#9496a8] font-light leading-relaxed">
-                Whether you need an enterprise data flow optimized, an automated AI workflow built, or infrastructure scaled, let's connect.
+                Whether you are looking to optimize enterprise EDI supply chain transactions, architect a custom local AI cluster, or discuss remote leadership opportunities, reach out directly.
               </p>
             </div>
 
             {/* Direct Channels */}
-            <div className="space-y-4 pt-4">
+            <div className="space-y-3 pt-2">
               <a
-                href="mailto:ammiforu@gmail.com"
+                href="mailto:ammitetala@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors"
               >
                 <div className="p-3 rounded-xl bg-[#171720] text-[#e2c392]">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#9496a8]">EMAIL DIRECT</div>
-                  <div className="text-sm font-bold font-syne text-white">ammiforu@gmail.com</div>
+                  <div className="text-xs font-mono text-[#9496a8]">PRIMARY EMAIL</div>
+                  <div className="text-sm font-bold font-syne text-white">ammitetala@gmail.com</div>
                 </div>
               </a>
 
               <a
-                href="https://github.com/ammiforu"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+19256635429"
                 className="flex items-center gap-4 p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors"
               >
                 <div className="p-3 rounded-xl bg-[#171720] text-[#e2c392]">
-                  <GithubIcon className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#9496a8]">GITHUB REPOSITORIES</div>
-                  <div className="text-sm font-bold font-syne text-white">github.com/ammiforu</div>
+                  <div className="text-xs font-mono text-[#9496a8]">DIRECT PHONE</div>
+                  <div className="text-sm font-bold font-syne text-white">+1 (925) 663-5429</div>
                 </div>
               </a>
 
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors"
-              >
+              <div className="flex items-center gap-4 p-4 rounded-2xl glass-panel editorial-border">
                 <div className="p-3 rounded-xl bg-[#171720] text-[#e2c392]">
-                  <LinkedinIcon className="w-5 h-5" />
+                  <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#9496a8]">LINKEDIN PROFILE</div>
-                  <div className="text-sm font-bold font-syne text-white">Ammi Reddy Tetala</div>
+                  <div className="text-xs font-mono text-[#9496a8]">LOCATION & AVAILABILITY</div>
+                  <div className="text-sm font-bold font-syne text-white">Spring Hill, TN (Open to Remote)</div>
                 </div>
-              </a>
+              </div>
 
-              <a
-                href="https://youtube.com/@ViswaDarshiniUsa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors"
-              >
-                <div className="p-3 rounded-xl bg-[#171720] text-[#e2c392]">
-                  <YoutubeIcon className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-[#9496a8]">YOUTUBE NETWORK</div>
-                  <div className="text-sm font-bold font-syne text-white">@ViswaDarshiniUsa</div>
-                </div>
-              </a>
+              <div className="grid grid-cols-3 gap-3 pt-2">
+                <a
+                  href="https://linkedin.com/in/ammireddytetala"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors flex flex-col items-center justify-center gap-2 group"
+                >
+                  <LinkedinIcon className="w-5 h-5 text-[#e2c392] group-hover:scale-110 transition-transform" />
+                  <span className="text-[11px] font-mono text-[#9496a8]">LinkedIn</span>
+                </a>
+
+                <a
+                  href="https://github.com/ammiforu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors flex flex-col items-center justify-center gap-2 group"
+                >
+                  <GithubIcon className="w-5 h-5 text-[#e2c392] group-hover:scale-110 transition-transform" />
+                  <span className="text-[11px] font-mono text-[#9496a8]">GitHub</span>
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@ammiexplains"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors flex flex-col items-center justify-center gap-2 group"
+                >
+                  <YoutubeIcon className="w-5 h-5 text-[#e2c392] group-hover:scale-110 transition-transform" />
+                  <span className="text-[11px] font-mono text-[#9496a8]">YouTube</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -112,7 +122,7 @@ export const Contact: React.FC = () => {
                   <input
                     type="text"
                     required
-                    placeholder="John Doe"
+                    placeholder="Jane Doe"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3.5 rounded-xl bg-[#111116] border border-white/10 text-sm text-white focus:outline-none focus:border-[#e2c392] transition-colors"
@@ -123,7 +133,7 @@ export const Contact: React.FC = () => {
                   <input
                     type="email"
                     required
-                    placeholder="john@enterprise.com"
+                    placeholder="jane@enterprise.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3.5 rounded-xl bg-[#111116] border border-white/10 text-sm text-white focus:outline-none focus:border-[#e2c392] transition-colors"
@@ -136,7 +146,7 @@ export const Contact: React.FC = () => {
                 <input
                   type="text"
                   required
-                  placeholder="Enterprise Integration / AI Architecture Inquiry"
+                  placeholder="EDI Optimization / AI Automation Inquiry"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-4 py-3.5 rounded-xl bg-[#111116] border border-white/10 text-sm text-white focus:outline-none focus:border-[#e2c392] transition-colors"
@@ -148,7 +158,7 @@ export const Contact: React.FC = () => {
                 <textarea
                   rows={5}
                   required
-                  placeholder="Tell me about your project requirements..."
+                  placeholder="Tell me about your architectural or operational requirements..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3.5 rounded-xl bg-[#111116] border border-white/10 text-sm text-white focus:outline-none focus:border-[#e2c392] transition-colors resize-none"
@@ -163,12 +173,12 @@ export const Contact: React.FC = () => {
                 {submitted ? (
                   <>
                     <CheckCircle className="w-4 h-4 text-emerald-950" />
-                    <span>MESSAGE SENT SUCCESSFULLY</span>
+                    <span>MESSAGE TRANSMITTED SUCCESSFULLY</span>
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>SEND MESSAGE</span>
+                    <span>START A CONVERSATION</span>
                   </>
                 )}
               </button>

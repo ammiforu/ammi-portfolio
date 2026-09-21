@@ -1,27 +1,32 @@
 # Project Context: Premium 360° Portfolio
 
 ## Identity & Role
-Ammi Reddy Tetala — Enterprise IT Manager & Solutions Developer.
-Media Holding Company Portfolio Asset.
+- **Subject**: Ammi Reddy Tetala
+- **Title**: IT Manager | Supply Chain & Logistics Technology | AI-Driven Automation Leader
+- **Location**: Spring Hill, TN (Open to Remote)
+- **Email**: ammitetala@gmail.com | Phone: +1 (925) 663-5429
+- **LinkedIn**: https://linkedin.com/in/ammireddytetala
+- **GitHub**: https://github.com/ammiforu
+- **YouTube Flagship**: https://www.youtube.com/@ammiexplains (AMMI EXPLAIN)
+- **Digital Media Holding Asset**: Automated 10-channel YouTube network
 
 ## Key Stack & Architecture
-- **Vite + React + TypeScript + Tailwind CSS**
+- **Vite + React 19 + TypeScript + Tailwind CSS v4**
 - **GSAP + ScrollTrigger + Lenis Smooth Scroll**
-- **HeroTurntableCanvas**: 360° Interactive Canvas & Frame Turntable Engine
+- **360° Hero Turntable Engine**: 32 high-resolution WebP frames extracted and rendered from Ammi's real photographic turnaround reference sheet
 - **Components**:
-  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece
+  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece with Ammi's real photographic frames
   - `Navbar.tsx`: Glass sticky header & mobile fullscreen overlay menu
-  - `About.tsx`: GEODIS IT background & supply chain highlights
+  - `About.tsx`: GEODIS 14-person global team (US & India), 7+ years supply chain tech, real photo badge
   - `Marquee.tsx`: Refined horizontal competency ticker
-  - `Projects.tsx`: Large editorial presentations for Database Migration, Remotion Pipeline, AI Portfolio, and Automation Suite
-  - `Skills.tsx`: Interactive typography grid
-  - `Services.tsx`: Client-focused solution offerings
-  - `WhyMe.tsx`: Core editorial value statements
-  - `Achievements.tsx`: Key enterprise milestones (BizManager upgrades, IBM MQ TLS fixes)
-  - `MediaChannels.tsx`: YouTube Telugu network showcase (@ViswaDarshiniUsa, AMMI EXPLAIN)
-  - `Testimonials.tsx`: Enterprise references
-  - `Contact.tsx`: Interactive form & social links
+  - `Projects.tsx`: Verified showcases: AuthPortal (ASP.NET Core/C#/PostgreSQL), YouTube AI Content Automation (FastAPI/10 channels), Enterprise EDI (IBM Sterling/856 ASN), IBM MQ TLS Zero-Downtime Fix
+  - `Skills.tsx`: Verified competencies: EDI (X12/EDIFACT), IBM MQ, Python, Bash, ASP.NET Core, Hadoop, Linux, Grafana
+  - `Services.tsx`: Client-focused enterprise architecture & automation offerings
+  - `Achievements.tsx`: Milestones (MQ TLS recovery, BizManager upgrades, Grafana rollout, Hadoop at AT&T) & Degrees (MS Information Systems Security, MS CS, BS CS)
+  - `MediaChannels.tsx`: YouTube Flagship channel @ammiexplains and @ViswaDarshiniUsa
+  - `Contact.tsx`: Direct email, phone, LinkedIn, GitHub, YouTube, and interactive inquiry form
   - `CustomCursor.tsx`: Smooth follower with VIEW/EXPLORE expansion
 
 ## Verification Status
 - Production Build: `npm run build` PASS (0 errors, 0 warnings).
+- Browser Subagent Live Verification: PASS (Hero 360 rotation, real photo rendering, @ammiexplains URLs confirmed).

@@ -6,54 +6,59 @@ export const Skills: React.FC = () => {
 
   const categories = [
     {
-      name: 'Enterprise Integrations',
+      name: 'Systems & EDI Integration',
       items: [
-        'IBM Sterling B2B Integrator',
-        'OpenText BizManager',
-        'IBM MQ',
-        'Serv-U FTP/SFTP',
-        'AS2 Protocol',
-        'Secure File Transfer (SFTP)',
+        'IBM B2B Integrator (Sterling)',
+        'EDI (X12 & EDIFACT)',
+        '856 ASN & 850 PO Mapping',
+        '810 / 820 / 824 Invoices & Payments',
+        'IBM MQ TLS/SSL Queue Mgmt',
+        'AS2 / SFTP / FTP Protocols',
+        'WMS Integration & Triaging',
       ],
     },
     {
-      name: 'Databases & Scripting',
+      name: 'Automation, AI & Scripting',
       items: [
-        'Oracle SQL',
-        'PostgreSQL',
-        'Python Automation',
-        'Unix Bash Scripting',
-        'PowerShell Core',
+        'Python Automation & Pipelines',
+        'Bash Shell Scripting (RHEL/CentOS)',
+        'FastAPI Self-Hosted Proxies',
+        'Generative AI Content Systems',
+        'Grafana Observability Dashboards',
+        'Cron Daemons & Lock-File Safety',
       ],
     },
     {
-      name: 'Infrastructure & DevOps',
+      name: 'Full-Stack Platforms & DBs',
       items: [
-        'Linux (Ubuntu Server)',
-        'Docker Containerization',
-        'Nginx Proxy Manager',
-        'WireGuard VPN',
-        'ZeroTier Networks',
+        'ASP.NET Core MVC & Web API',
+        'C# & Entity Framework Core',
+        'PostgreSQL & Oracle SQL',
+        'JWT & Encrypted Vault Auth',
+        'Automated PDF & Excel Reporting',
+        'PowerShell Auto-Deployment',
       ],
     },
     {
-      name: 'AI Hardware & LLMs',
+      name: 'Platforms & Big Data',
       items: [
-        'Ollama (Gemma, Qwen)',
-        'Dell Micro PC AI Clusters',
-        'Gemini API Integration',
-        'Claude Architecture',
-        'Git & GitHub Workflows',
+        'RHEL / CentOS / Ubuntu Linux',
+        'Hadoop (HDFS, Hive, Kafka, Spark)',
+        'Docker & Nginx Proxy Manager',
+        'AWS Cloud (EC2, S3)',
+        'WireGuard & ZeroTier Networks',
+        'Git & CI/CD Git Hooks',
       ],
     },
     {
-      name: 'Web & Motion',
+      name: 'Leadership & Methodologies',
       items: [
-        'React & TypeScript',
-        'GSAP & ScrollTrigger',
-        'Lenis Smooth Scroll',
-        'Framer Motion',
-        'Tailwind CSS v4',
+        'Global Team Leadership (14 engineers)',
+        'Onshore/Offshore Coordination',
+        'Cross-Functional Stakeholder Mgmt',
+        'Vendor & Retail Client Onboarding',
+        'Root Cause Defect Investigation',
+        'Agile / Scrum Delivery',
       ],
     },
   ];
@@ -61,14 +66,14 @@ export const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-28 bg-[#08080a] text-[#f4f4f6] px-6 md:px-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto space-y-12">
-        {/* Section Header */}
+        {/* Header */}
         <div className="space-y-3">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#e2c392] tracking-widest uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-[#e2c392]" />
-            TECHNICAL PROFICIENCY
+            TECHNICAL & LEADERSHIP COMPETENCIES
           </div>
           <h2 className="text-3xl md:text-5xl font-bold font-syne tracking-tight text-white">
-            Architectural <span className="text-gold-gradient">Capabilities.</span>
+            Core Competencies & <span className="text-gold-gradient">Stack.</span>
           </h2>
         </div>
 
@@ -108,7 +113,7 @@ export const Skills: React.FC = () => {
                   {skill}
                 </span>
                 <div className="text-[10px] font-mono text-[#9496a8] pt-1 uppercase tracking-widest">
-                  ENTERPRISE CERTIFIED
+                  PRODUCTION VERIFIED
                 </div>
               </motion.div>
             ))}

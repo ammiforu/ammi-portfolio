@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
               & automated AI workflows.
             </h1>
             <p className="text-xs md:text-sm text-[#9496a8] font-light leading-relaxed">
-              IT Manager & Developer focused on enterprise integration, database infrastructure, and modern digital products.
+              IT Manager at GEODIS leading a 14-person global team across the U.S. and India. Specializing in EDI, WMS systems, IBM MQ, and solo-engineered automation platforms.
             </p>
           </div>
 
@@ -107,10 +107,10 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
             <div className="space-y-1">
               <div className="text-xs font-mono text-[#e2c392] tracking-wider uppercase flex items-center md:justify-end gap-1">
                 <Sparkles className="w-3.5 h-3.5 text-[#e2c392]" />
-                GEODIS IT MANAGEMENT
+                GEODIS IT LEADERSHIP
               </div>
               <div className="text-xs text-[#9496a8]">
-                IBM Sterling • OpenText BizManager • PostgreSQL • Ollama Local AI
+                Franklin, TN • IBM Sterling • WMS • IBM MQ • AuthPortal • @ammiexplains
               </div>
             </div>
 
