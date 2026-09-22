@@ -14,7 +14,7 @@ export const Projects: React.FC = () => {
       icon: <Database className="w-6 h-6 text-[#e2c392]" />,
       visualBg: 'from-amber-950/50 via-[#1a1309] to-black',
       codeSnippet: 'services.AddHostedService<OracleTransactionMonitoringWorker>();',
-      previewImg: '/assets/ammi/pose_laptop_clean.png',
+      previewImg: '/assets/ammi/projects_authportal_bg.jpg',
       badge: 'SOLO-BUILT AT GEODIS',
     },
     {
@@ -27,7 +27,7 @@ export const Projects: React.FC = () => {
       icon: <Video className="w-6 h-6 text-[#e2c392]" />,
       visualBg: 'from-red-950/40 via-[#150a0a] to-black',
       codeSnippet: 'uvicorn proxy.main:app --host 0.0.0.0 --port 8000 --workers 4',
-      previewImg: '/assets/ammi/pose_explain_clean.png',
+      previewImg: '/assets/ammi/projects_youtube_bg.jpg',
       badge: '10 CHANNELS POWERED',
       link: 'https://www.youtube.com/@ammiexplains',
     },
@@ -41,7 +41,7 @@ export const Projects: React.FC = () => {
       icon: <Server className="w-6 h-6 text-[#e2c392]" />,
       visualBg: 'from-blue-950/40 via-[#0a101f] to-black',
       codeSnippet: 'SELECT envelope_id, sender_id, status FROM b2b_x12_inbound WHERE doc_type = 856;',
-      previewImg: '/assets/ammi/pose_point_clean.png',
+      previewImg: '/assets/ammi/projects_edi_bg.jpg',
       badge: '99.99% TRANSACTION SLA',
     },
     {
@@ -54,7 +54,7 @@ export const Projects: React.FC = () => {
       icon: <ShieldCheck className="w-6 h-6 text-[#e2c392]" />,
       visualBg: 'from-emerald-950/40 via-[#071710] to-black',
       codeSnippet: 'runmqsc QMGR01 <<EOF\nREFRESH SECURITY TYPE(SSL)\nEOF',
-      previewImg: '/assets/ammi/exp_confident.png',
+      previewImg: '/assets/ammi/projects_mq_bg.jpg',
       badge: 'ZERO DOWNTIME ROTATION',
     },
   ];
@@ -141,31 +141,29 @@ export const Projects: React.FC = () => {
                 </div>
 
                 {/* Right Visual Box */}
-                <div className="lg:col-span-5 relative h-72 md:h-84 rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between p-6 bg-gradient-to-br transition-transform duration-700 group-hover:scale-[1.02]">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.visualBg} opacity-85`} />
+                <div className="lg:col-span-5 relative h-72 md:h-84 rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between p-6 bg-black transition-transform duration-700 group-hover:scale-[1.02]">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.visualBg} opacity-70 z-10 mix-blend-multiply`} />
+                  
+                  {/* FULL BLEED BACKGROUND IMAGE */}
+                  <img
+                    src={project.previewImg}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 z-0 grayscale group-hover:grayscale-0 mix-blend-screen"
+                  />
 
-                  <div className="relative z-10 flex items-center justify-between">
+                  <div className="relative z-20 flex items-center justify-between">
                     <div className="p-3 rounded-xl bg-black/70 backdrop-blur-md border border-white/10">
                       {project.icon}
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-[#e2c392] bg-black/60 px-3 py-1 rounded-full border border-white/10">
+                      <span className="text-[10px] font-mono text-[#e2c392] bg-black/60 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md shadow-xl">
                         {project.status}
                       </span>
                     </div>
                   </div>
 
-                  {/* Real Pose Stamp */}
-                  <div className="absolute right-4 bottom-14 opacity-25 group-hover:opacity-45 transition-opacity duration-500 pointer-events-none">
-                    <img
-                      src={project.previewImg}
-                      alt="Ammi Pose"
-                      className="h-44 object-contain"
-                    />
-                  </div>
-
                   {/* Terminal snippet */}
-                  <div className="relative z-10 p-4 rounded-xl bg-black/85 backdrop-blur-md border border-white/10 font-mono text-[11px] text-[#9496a8] overflow-x-auto whitespace-pre">
+                  <div className="relative z-20 p-4 rounded-xl bg-black/85 backdrop-blur-md border border-white/10 font-mono text-[11px] text-[#9496a8] overflow-x-auto whitespace-pre mt-auto transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 shadow-2xl">
                     <span className="text-emerald-400">$ </span>{project.codeSnippet}
                   </div>
                 </div>

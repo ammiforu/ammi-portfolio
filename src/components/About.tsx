@@ -76,11 +76,11 @@ export const About: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden glass-panel editorial-border p-4 group">
               <div className="relative h-[480px] rounded-2xl overflow-hidden bg-gradient-to-b from-[#161622] to-[#08080a] flex items-center justify-center">
                 <img
-                  src="/assets/ammi/ammi_hero_main.png"
-                  alt="Ammi Reddy Tetala Portrait"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  src="/assets/infrastructure_ai.jpg"
+                  alt="Enterprise IT Infrastructure & AI Automation"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-[#08080a]/40 to-transparent opacity-90" />
                 
                 {/* Real Verified Tag */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#111116]/90 backdrop-blur-md border border-white/10 space-y-1">

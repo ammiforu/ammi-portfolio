@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface PreloaderProps {
@@ -6,75 +6,87 @@ interface PreloaderProps {
 }
 
 export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
+  const [loadingText, setLoadingText] = useState('');
+  const fullText = "AMMI REDDY TETALA // ENTERPRISE AI & INTEGRATION";
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
+    // Typing effect
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setLoadingText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+        setTimeout(() => setIsTypingComplete(true), 400); // Small pause after typing
+      }
+    }, 40); // typing speed
+
+    // Progress bar effect
+    const progressInterval = setInterval(() => {
+      setProgress(prev => {
         if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            setIsFinished(true);
-            setTimeout(onComplete, 800);
-          }, 200);
+          clearInterval(progressInterval);
           return 100;
         }
-        return prev + Math.floor(Math.random() * 15) + 5;
+        // Random bursts of progress simulating asset loading
+        return prev + Math.random() * 15;
       });
-    }, 80);
+    }, 150);
 
-    return () => clearInterval(interval);
-  }, [onComplete]);
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(progressInterval);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isTypingComplete && progress >= 100) {
+      setTimeout(() => onComplete(), 500); // Wait a beat before dismissing
+    }
+  }, [isTypingComplete, progress, onComplete]);
 
   return (
     <AnimatePresence>
-      {!isFinished && (
-        <motion.div
-          key="preloader"
-          initial={{ opacity: 1 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[10000] flex flex-col justify-between bg-[#08080a] p-8 md:p-16 text-[#f4f4f6]"
-        >
-          {/* Header */}
-          <div className="flex justify-between items-center text-xs tracking-widest text-[#9496a8] uppercase font-mono">
-            <span>AMMI REDDY TETALA</span>
-            <span>ENTERPRISE PORTFOLIO</span>
-          </div>
-
-          {/* Center Content */}
-          <div className="flex flex-col items-center justify-center my-auto">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-7xl font-bold tracking-tighter font-syne mb-6 text-center text-gold-gradient"
-            >
-              AMMI
-            </motion.h1>
-            <div className="text-sm font-light tracking-wider text-[#9496a8] uppercase mb-8">
-              Loading experience...
-            </div>
-
-            {/* Progress Bar Container */}
-            <div className="w-64 md:w-96 h-[2px] bg-white/10 rounded-full overflow-hidden relative">
-              <motion.div
-                className="h-full bg-gradient-to-r from-[#e2c392] to-[#f5d79e]"
-                style={{ width: `${Math.min(progress, 100)}%` }}
-                transition={{ ease: 'easeOut' }}
+      <motion.div
+        initial={{ opacity: 1 }}
+        exit={{ opacity: 0, y: -20, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
+        className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#08080a]"
+      >
+        <div className="w-full max-w-md px-8 flex flex-col items-center space-y-8">
+          
+          {/* Typing Text */}
+          <div className="h-6 flex items-center justify-center">
+            <span className="text-xs md:text-sm font-mono tracking-[0.2em] text-[#e2c392]">
+              {loadingText}
+              <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 0.8, repeat: Infinity }}
+                className="inline-block w-2 h-4 bg-[#e2c392] ml-1 align-middle"
               />
-            </div>
+            </span>
           </div>
 
-          {/* Footer Progress Counter */}
-          <div className="flex justify-between items-end text-xs font-mono text-[#9496a8]">
-            <div>© 2026 holding network</div>
-            <div className="text-3xl font-bold font-syne text-[#e2c392]">
-              {Math.min(progress, 100)}%
-            </div>
+          {/* Progress Bar Container */}
+          <div className="w-full h-[1px] bg-white/10 relative overflow-hidden">
+            <motion.div 
+              className="absolute top-0 left-0 bottom-0 bg-[#e2c392]"
+              initial={{ width: '0%' }}
+              animate={{ width: `${Math.min(progress, 100)}%` }}
+              transition={{ ease: "easeOut", duration: 0.2 }}
+            />
           </div>
-        </motion.div>
-      )}
+
+          {/* Loading details */}
+          <div className="w-full flex justify-between text-[10px] font-mono text-[#9496a8] uppercase tracking-widest">
+            <span>INITIALIZING KERNEL</span>
+            <span>{Math.min(Math.floor(progress), 100)}%</span>
+          </div>
+
+        </div>
+      </motion.div>
     </AnimatePresence>
   );
 };

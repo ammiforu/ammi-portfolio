@@ -13,7 +13,7 @@ export const MediaChannels: React.FC = () => {
       desc: 'Powered by a solo-built automated pipeline. Scripting, AI generation, audio synthesis, and automated thumbnail creation all running via self-hosted FastAPI proxy.',
       icon: <Brain className="w-6 h-6 text-[#e2c392]" />,
       link: 'https://www.youtube.com/@ammiexplains',
-      img: '/assets/ammi/exp_explaining.png',
+      img: '/assets/ammi/projects_youtube_ai.jpg',
       featured: true,
     },
     {
@@ -25,7 +25,7 @@ export const MediaChannels: React.FC = () => {
       desc: 'Targeted content delivering high-value technical frameworks, IT leadership coaching, and real-world enterprise engineering experiences.',
       icon: <Globe className="w-6 h-6 text-[#e2c392]" />,
       link: 'https://www.youtube.com/@ViswaDarshiniUsa',
-      img: '/assets/ammi/exp_confident.png',
+      img: '/assets/ammi/media_viswa_ai.jpg',
       featured: false,
     },
   ];

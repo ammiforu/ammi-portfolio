@@ -68,7 +68,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
           </nav>
 
           {/* Right CTA Button */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="/assets/Ammi_Reddy_Tetala_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono font-medium tracking-widest text-[#9496a8] hover:text-[#e2c392] transition-colors uppercase"
+            >
+              Resume
+            </a>
             <button
               onClick={() => handleLinkClick('contact')}
               data-cursor="CONNECT"
@@ -116,6 +124,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
             </div>
 
             <div className="space-y-4 pt-8 border-t border-white/10">
+              <a
+                href="/assets/Ammi_Reddy_Tetala_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-4 rounded-full border border-white/10 bg-[#111116] text-[#f4f4f6] text-sm font-bold uppercase tracking-wider text-center"
+              >
+                Download Resume
+              </a>
               <button
                 onClick={() => handleLinkClick('contact')}
                 className="w-full py-4 rounded-full bg-[#e2c392] text-[#08080a] text-sm font-bold uppercase tracking-wider text-center"
