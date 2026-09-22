@@ -12,22 +12,46 @@ export const Contact: React.FC = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Construct the mailto link
-    const mailtoLink = `mailto:ammitetala@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
     
-    // Open the default mail client
-    window.location.href = mailtoLink;
+    if (!accessKey || accessKey === 'your_key_here') {
+      alert("Form is not configured yet! Please add your VITE_WEB3FORMS_KEY to the .env file.");
+      return;
+    }
 
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 5000);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+        }, 5000);
+      } else {
+        alert("Something went wrong submitting the form.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message. Please check your connection.");
+    }
   };
 
   return (
