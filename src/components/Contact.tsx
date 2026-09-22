@@ -220,8 +220,35 @@ export const Contact: React.FC = () => {
               </button>
             </form>
           </div>
+
+          {/* ── Calendly Booking ── */}
+          <div className="mt-10 p-8 rounded-3xl glass-panel editorial-border space-y-5 text-center">
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-[#e2c392] tracking-widest uppercase">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              PREFER A LIVE CONVERSATION?
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold font-syne text-white">
+              Book a 30-min call — no sales pitch.
+            </h3>
+            <p className="text-sm text-[#9496a8] max-w-md mx-auto font-light">
+              Directly schedule time on my calendar. Ideal for discussing enterprise architecture, AI integration scopes, or leadership roles.
+            </p>
+            <a
+              href="https://calendly.com/ammitetala"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-[#e2c392]/40 text-[#e2c392] text-xs font-bold tracking-widest uppercase hover:bg-[#e2c392] hover:text-[#08080a] transition-all duration-300"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+              Schedule on Calendly
+            </a>
+            <p className="text-[10px] font-mono text-[#9496a8]/50">
+              Opens Calendly · ammi's real calendar · pick what works for you
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+

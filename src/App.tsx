@@ -18,6 +18,8 @@ import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
+import { AIChat } from './components/AIChat';
+import { RecruiterProvider, RecruiterToggle } from './components/RecruiterToggle';
 
 export const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -37,42 +39,50 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#08080a] text-[#f4f4f6] selection:bg-[#e2c392] selection:text-[#08080a]">
-      {/* Preloader */}
-      {loading && <Preloader onComplete={() => setLoading(false)} />}
+    <RecruiterProvider>
+      <div className="relative min-h-screen bg-[#08080a] text-[#f4f4f6] selection:bg-[#e2c392] selection:text-[#08080a]">
+        {/* Preloader */}
+        {loading && <Preloader onComplete={() => setLoading(false)} />}
 
-      {/* Custom Interactive Cursor */}
-      <CustomCursor />
-      
-      {/* Subtle Background Interaction */}
-      <MouseGlow />
+        {/* Custom Interactive Cursor */}
+        <CustomCursor />
 
-      {/* Sticky Navigation Header */}
-      <Navbar onNavClick={scrollToSection} />
+        {/* Subtle Background Interaction */}
+        <MouseGlow />
 
-      {/* Main Content Layout */}
-      <main className="relative">
-        <Hero
-          onConnectClick={() => scrollToSection('contact')}
-          onWorkClick={() => scrollToSection('work')}
-        />
-        <About />
-        <Marquee />
-        <Projects />
-        <Journey />
-        <SkillsGrid />
-        <Services />
-        <WhyMe />
-        <Achievements />
-        <MediaChannels />
-        <Testimonials />
-        <Contact />
-        <FinalCTA onConnectClick={() => scrollToSection('contact')} />
-      </main>
+        {/* Sticky Navigation Header */}
+        <Navbar onNavClick={scrollToSection} />
 
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Recruiter Role Toggle — floats below navbar */}
+        <RecruiterToggle />
+
+        {/* Main Content Layout */}
+        <main className="relative">
+          <Hero
+            onConnectClick={() => scrollToSection('contact')}
+            onWorkClick={() => scrollToSection('work')}
+          />
+          <About />
+          <Marquee />
+          <Projects />
+          <Journey />
+          <SkillsGrid />
+          <Services />
+          <WhyMe />
+          <Achievements />
+          <MediaChannels />
+          <Testimonials />
+          <Contact />
+          <FinalCTA onConnectClick={() => scrollToSection('contact')} />
+        </main>
+
+        {/* Footer */}
+        <Footer />
+
+        {/* Floating AI Chat Widget */}
+        <AIChat />
+      </div>
+    </RecruiterProvider>
   );
 };
 

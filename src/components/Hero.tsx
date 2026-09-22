@@ -4,6 +4,8 @@ import { ArrowDown, Sparkles } from 'lucide-react';
 import { ParticleBackground } from './ParticleBackground';
 import { Magnetic } from './Magnetic';
 import { AnimatedCounter } from './AnimatedCounter';
+import { LiveTicker } from './LiveTicker';
+import { useRecruiterMode } from './RecruiterToggle';
 
 interface HeroProps {
   onConnectClick: () => void;
@@ -13,6 +15,13 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [ytSubs, setYtSubs] = useState(0);
+  const { mode } = useRecruiterMode();
+
+  const headlines = {
+    enterprise: { line1: 'Building robust', line2: 'enterprise architectures', line3: '& automated workflows.' },
+    ai: { line1: 'Architecting next-gen', line2: 'AI & LLM systems', line3: 'for enterprise scale.' },
+  };
+  const h = headlines[mode];
 
   useEffect(() => {
     fetch('/analytics/ammi_explain_daily.json')
@@ -72,14 +81,17 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
       <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-12 flex flex-col justify-between pointer-events-none">
         {/* Top Floating Badge & Status */}
         <div className="flex justify-between items-start">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="pointer-events-auto blue-glass px-4 py-2 rounded-full flex items-center gap-2 text-xs font-mono tracking-widest text-[var(--accent-cyan)]"
+            className="space-y-2 pointer-events-auto"
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]" />
-            <span>ENTERPRISE IT MANAGER & SOLUTIONS DEVELOPER</span>
+            <div className="blue-glass px-4 py-2 rounded-full flex items-center gap-2 text-xs font-mono tracking-widest text-[var(--accent-cyan)]">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]" />
+              <span>ENTERPRISE IT MANAGER & SOLUTIONS DEVELOPER</span>
+            </div>
+            <LiveTicker />
           </motion.div>
 
           <motion.div 
@@ -103,16 +115,16 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
             className="md:col-span-4 space-y-4 pointer-events-auto bg-gradient-to-r from-[var(--bg-dark)]/90 via-[var(--bg-dark)]/60 to-transparent p-4 md:p-6 rounded-2xl backdrop-blur-sm border-l border-[var(--border-subtle)]"
           >
             <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight font-syne leading-tight text-white flex flex-wrap">
-              {"Building robust ".split(" ").map((word, i) => (
-                <motion.span key={`w1-${i}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }} className="mr-2">{word}</motion.span>
+              {h.line1.split(' ').map((word, i) => (
+                <motion.span key={`w1-${i}-${mode}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }} className="mr-2">{word}</motion.span>
               ))}
               <div className="w-full h-0" />
-              {"enterprise architectures ".split(" ").map((word, i) => (
-                <motion.span key={`w2-${i}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1.0 + i * 0.1 }} className="mr-2 text-cyan-gradient">{word}</motion.span>
+              {h.line2.split(' ').map((word, i) => (
+                <motion.span key={`w2-${i}-${mode}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1.0 + i * 0.1 }} className="mr-2 text-cyan-gradient">{word}</motion.span>
               ))}
               <div className="w-full h-0" />
-              {"& automated AI workflows.".split(" ").map((word, i) => (
-                <motion.span key={`w3-${i}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1.2 + i * 0.1 }} className="mr-2">{word}</motion.span>
+              {h.line3.split(' ').map((word, i) => (
+                <motion.span key={`w3-${i}-${mode}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1.2 + i * 0.1 }} className="mr-2">{word}</motion.span>
               ))}
             </h1>
             <p className="text-xs md:text-sm text-[var(--text-secondary)] font-light leading-relaxed">
