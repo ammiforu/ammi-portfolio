@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, Calendar } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, YoutubeIcon } from './Icons';
 
 export const Contact: React.FC = () => {
@@ -114,7 +114,7 @@ export const Contact: React.FC = () => {
 
               <div className="grid grid-cols-3 gap-3 pt-2">
                 <a
-                  href="https://linkedin.com/in/ammireddytetala"
+                  href="https://www.linkedin.com/in/ammireddytetala/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 rounded-2xl glass-panel editorial-border hover:border-[#e2c392]/40 transition-colors flex flex-col items-center justify-center gap-2 group"
@@ -221,29 +221,32 @@ export const Contact: React.FC = () => {
             </form>
           </div>
 
-          {/* ── Calendly Booking ── */}
-          <div className="mt-10 p-8 rounded-3xl glass-panel editorial-border space-y-5 text-center">
+          {/* ── Google Calendar Appointment Booking ── */}
+          <div className="mt-10 p-8 rounded-3xl glass-panel editorial-border space-y-5 text-center relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-[#039BE5]/10 rounded-full blur-3xl pointer-events-none" />
             <div className="inline-flex items-center gap-2 text-xs font-mono text-[#e2c392] tracking-widest uppercase">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              PREFER A LIVE CONVERSATION?
+              PREFER A DIRECT CONVERSATION?
             </div>
             <h3 className="text-xl md:text-2xl font-bold font-syne text-white">
               Book a 30-min call — no sales pitch.
             </h3>
-            <p className="text-sm text-[#9496a8] max-w-md mx-auto font-light">
-              Directly schedule time on my calendar. Ideal for discussing enterprise architecture, AI integration scopes, or leadership roles.
+            <p className="text-sm text-[#9496a8] max-w-md mx-auto font-light leading-relaxed">
+              Directly schedule time on my Google Calendar. Ideal for discussing enterprise architecture, EDI modernization, AI integration scopes, or leadership opportunities.
             </p>
-            <a
-              href="https://calendly.com/ammitetala"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-[#e2c392]/40 text-[#e2c392] text-xs font-bold tracking-widest uppercase hover:bg-[#e2c392] hover:text-[#08080a] transition-all duration-300"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              Schedule on Calendly
-            </a>
-            <p className="text-[10px] font-mono text-[#9496a8]/50">
-              Opens Calendly · ammi's real calendar · pick what works for you
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <a
+                href="https://calendar.app.google/FkHk6NzDGzwhXEBn8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#039BE5] to-[#1a73e8] text-white text-xs font-bold tracking-widest uppercase hover:brightness-110 shadow-[0_0_25px_rgba(3,155,229,0.35)] transition-all duration-300"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Book an Appointment on Google Calendar</span>
+              </a>
+            </div>
+            <p className="text-[11px] font-mono text-[#9496a8]/70">
+              Instant Google Calendar booking · Real-time availability · Automatic Google Meet invite
             </p>
           </div>
         </div>

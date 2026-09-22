@@ -70,7 +70,7 @@ export const Testimonials: React.FC = () => {
         {/* LinkedIn + References CTA */}
         <div className="flex flex-col md:flex-row gap-4">
           <a
-            href="https://www.linkedin.com/in/ammi-reddy-tetala"
+            href="https://www.linkedin.com/in/ammireddytetala/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-3 p-5 rounded-2xl border border-[#0077b5]/30 bg-[#0077b5]/5 hover:bg-[#0077b5]/10 hover:border-[#0077b5]/60 transition-all duration-300 group"

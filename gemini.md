@@ -5,26 +5,30 @@
 - **Title**: IT Manager | Supply Chain & Logistics Technology | AI-Driven Automation Leader
 - **Location**: Spring Hill, TN (Open to Remote)
 - **Email**: ammitetala@gmail.com | Phone: +1 (925) 663-5429
-- **LinkedIn**: https://linkedin.com/in/ammireddytetala
+- **LinkedIn**: https://www.linkedin.com/in/ammireddytetala/
 - **GitHub**: https://github.com/ammiforu
 - **YouTube Flagship**: https://www.youtube.com/@ammiexplains (AMMI EXPLAIN)
+- **Google Calendar Booking**: https://calendar.app.google/FkHk6NzDGzwhXEBn8
 - **Digital Media Holding Asset**: Automated 10-channel YouTube network
 
 ## Key Stack & Architecture
 - **Vite + React 19 + TypeScript + Tailwind CSS v4**
 - **GSAP + ScrollTrigger + Lenis Smooth Scroll**
 - **360° Hero Turntable Engine**: 32 high-resolution WebP frames extracted and rendered from Ammi's real photographic turnaround reference sheet
+- **Serverless AI Proxy**: `api/chat.ts` (Vercel Serverless Function) keeping `GEMINI_API_KEY` secure server-side
 - **Components**:
-  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece with Ammi's real photographic frames
-  - `Navbar.tsx`: Glass sticky header & mobile fullscreen overlay menu
+  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece with Ammi's real photographic frames & LiveTicker
+  - `AIChat.tsx`: Floating AI Assistant with highlighted animated pointer arrow, FAQ knowledge base & secure Gemini API proxy
+  - `Navbar.tsx`: Glass sticky header, Recruiter Mode Toggle, & mobile fullscreen overlay menu
   - `About.tsx`: GEODIS 14-person global team (US & India), 7+ years supply chain tech, real photo badge
   - `Marquee.tsx`: Refined horizontal competency ticker
   - `Projects.tsx`: Verified showcases: AuthPortal (ASP.NET Core/C#/PostgreSQL), YouTube AI Content Automation (FastAPI/10 channels), Enterprise EDI (IBM Sterling/856 ASN), IBM MQ TLS Zero-Downtime Fix
   - `Skills.tsx`: Verified competencies: EDI (X12/EDIFACT), IBM MQ, Python, Bash, ASP.NET Core, Hadoop, Linux, Grafana
   - `Services.tsx`: Client-focused enterprise architecture & automation offerings
   - `Achievements.tsx`: Milestones (MQ TLS recovery, BizManager upgrades, Grafana rollout, Hadoop at AT&T) & Degrees (MS Information Systems Security, MS CS, BS CS)
+  - `Testimonials.tsx`: Honest track record & enterprise references on request + verified LinkedIn connect CTA
   - `MediaChannels.tsx`: YouTube Flagship channel @ammiexplains and @ViswaDarshiniUsa
-  - `Contact.tsx`: Direct email, phone, LinkedIn, GitHub, YouTube, and interactive inquiry form
+  - `Contact.tsx`: Direct email, phone, canonical LinkedIn, GitHub, YouTube, inquiry form, and instant Google Calendar Appointment Scheduling
   - `CustomCursor.tsx`: Smooth follower with VIEW/EXPLORE expansion
 
 ## Verification Status
