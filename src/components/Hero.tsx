@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Sparkles } from 'lucide-react';
 import { ParticleBackground } from './ParticleBackground';
 import { Magnetic } from './Magnetic';
+import { AnimatedCounter } from './AnimatedCounter';
 
 interface HeroProps {
   onConnectClick: () => void;
@@ -11,6 +12,14 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const [ytSubs, setYtSubs] = useState(0);
+
+  useEffect(() => {
+    fetch('/analytics/ammi_explain_daily.json')
+      .then(r => r.json())
+      .then(j => setYtSubs(j.channel?.subscribers ?? 0))
+      .catch(() => null);
+  }, []);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
@@ -132,15 +141,27 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
             </div>
 
             {/* Stat Cards Mini */}
-            <div className="flex gap-4 mb-4">
-              <div className="blue-glass p-3 rounded-lg border border-[var(--border-subtle)] text-center">
-                <div className="text-xl font-syne font-bold text-[var(--text-primary)]">20<span className="text-[var(--accent-blue)]">+</span></div>
-                <div className="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider">Years Exp</div>
+            <div className="flex gap-3 mb-4 flex-wrap">
+              <div className="blue-glass p-3 rounded-lg border border-[var(--border-subtle)] text-center min-w-[60px]">
+                <div className="text-xl font-syne font-bold text-[var(--text-primary)]">
+                  <AnimatedCounter target={20} suffix="+" />
+                </div>
+                <div className="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider">Yrs Exp</div>
               </div>
-              <div className="blue-glass p-3 rounded-lg border border-[var(--border-subtle)] text-center">
-                <div className="text-xl font-syne font-bold text-[var(--text-primary)]">500<span className="text-[var(--accent-blue)]">+</span></div>
+              <div className="blue-glass p-3 rounded-lg border border-[var(--border-subtle)] text-center min-w-[60px]">
+                <div className="text-xl font-syne font-bold text-[var(--text-primary)]">
+                  <AnimatedCounter target={500} suffix="+" />
+                </div>
                 <div className="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider">Partners</div>
               </div>
+              {ytSubs > 0 && (
+                <div className="blue-glass p-3 rounded-lg border border-[var(--border-subtle)] text-center min-w-[60px]">
+                  <div className="text-xl font-syne font-bold text-[var(--accent-cyan)]">
+                    <AnimatedCounter target={ytSubs} />
+                  </div>
+                  <div className="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider">YT Subs</div>
+                </div>
+              )}
             </div>
 
             {/* CTAs */}
