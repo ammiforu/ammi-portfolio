@@ -1,34 +1,72 @@
-import React from 'react';
-import { Globe, Brain, Video, Sparkles, CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Globe, Brain, Video, Sparkles, CheckCircle2, TrendingUp, Eye, Users, Clock } from 'lucide-react';
 import { YoutubeIcon } from './Icons';
+import { AnimatedCounter } from './AnimatedCounter';
+
+interface ChannelAnalytics {
+  subscribers: number;
+  total_views: number;
+  video_count: number;
+  weekly_views: number;
+  weekly_watch_hours: number;
+  generated_at: string;
+}
+
+function useLiveAnalytics(): ChannelAnalytics | null {
+  const [data, setData] = useState<ChannelAnalytics | null>(null);
+
+  useEffect(() => {
+    fetch('/analytics/ammi_explain_daily.json')
+      .then(r => r.json())
+      .then(json => {
+        setData({
+          subscribers: json.channel?.subscribers ?? 0,
+          total_views: json.channel?.total_views ?? 0,
+          video_count: json.channel?.video_count ?? 0,
+          weekly_views: json.windows?.['7d']?.views ?? 0,
+          weekly_watch_hours: Math.round(json.windows?.['7d']?.watch_time_hours ?? 0),
+          generated_at: json.generated_at ?? '',
+        });
+      })
+      .catch(() => null);
+  }, []);
+
+  return data;
+}
 
 export const MediaChannels: React.FC = () => {
+  const analytics = useLiveAnalytics();
+
   const channels = [
     {
       handle: '@ammiexplains',
       title: 'AMMI EXPLAIN',
       tagline: 'Real Topics | Simple Explanations | A Brighter Tomorrow',
       niche: 'Human Psychology, Tech Deep Dives, Systems Thinking & Global Affairs',
-      stats: 'Core Flagship Channel',
       desc: 'Powered by a solo-built automated pipeline. Scripting, AI generation, audio synthesis, and automated thumbnail creation all running via self-hosted FastAPI proxy.',
       icon: <Brain className="w-6 h-6 text-[#e2c392]" />,
       link: 'https://www.youtube.com/@ammiexplains',
       img: '/assets/ammi/projects_youtube_ai.jpg',
       featured: true,
+      showLive: true,
     },
     {
       handle: '@ViswaDarshiniUsa',
       title: 'Viswa Darshini USA',
       tagline: 'Global Perspectives & USA Life',
       niche: 'Technology Architecture, Immigrant Career Growth & Industry Insights',
-      stats: 'Telugu Language Network',
       desc: 'Targeted content delivering high-value technical frameworks, IT leadership coaching, and real-world enterprise engineering experiences.',
       icon: <Globe className="w-6 h-6 text-[#e2c392]" />,
       link: 'https://www.youtube.com/@ViswaDarshiniUsa',
       img: '/assets/ammi/media_viswa_ai.jpg',
       featured: false,
+      showLive: false,
     },
   ];
+
+  const lastUpdated = analytics?.generated_at
+    ? new Date(analytics.generated_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    : null;
 
   return (
     <section id="content" className="py-24 bg-[#08080a] text-[#f4f4f6] px-6 md:px-12 border-t border-white/5">
@@ -49,6 +87,36 @@ export const MediaChannels: React.FC = () => {
             </p>
           </div>
         </div>
+
+        {/* Live Stats Bar */}
+        {analytics && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { icon: <Users className="w-4 h-4" />, label: 'Subscribers', value: analytics.subscribers, suffix: '' },
+              { icon: <Eye className="w-4 h-4" />, label: 'Total Views', value: analytics.total_views, suffix: '' },
+              { icon: <TrendingUp className="w-4 h-4" />, label: 'Views This Week', value: analytics.weekly_views, suffix: '' },
+              { icon: <Clock className="w-4 h-4" />, label: 'Watch Hrs / Week', value: analytics.weekly_watch_hours, suffix: 'h' },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="flex flex-col gap-2 p-4 rounded-2xl bg-[#0d0d14] border border-white/8 hover:border-[#e2c392]/30 transition-colors"
+              >
+                <div className="flex items-center gap-2 text-[#e2c392]/70 text-xs font-mono">
+                  {stat.icon}
+                  <span className="uppercase tracking-wider">{stat.label}</span>
+                </div>
+                <div className="text-2xl font-bold font-syne text-white">
+                  <AnimatedCounter target={stat.value} suffix={stat.suffix} duration={1600} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        {lastUpdated && (
+          <p className="text-[10px] font-mono text-[#9496a8]/60 -mt-6">
+            ⚡ Live data · Last synced {lastUpdated}
+          </p>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {channels.map((ch, idx) => (
@@ -99,7 +167,10 @@ export const MediaChannels: React.FC = () => {
 
               <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-[#9496a8]">
                 <span className="flex items-center gap-1 text-emerald-400">
-                  <CheckCircle2 className="w-3.5 h-3.5" /> {ch.stats}
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  {ch.showLive && analytics
+                    ? `${analytics.video_count} videos published`
+                    : ch.featured ? 'Core Flagship Channel' : 'Telugu Language Network'}
                 </span>
                 <span className="text-[#e2c392] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                   <Video className="w-3.5 h-3.5" /> WATCH ON YOUTUBE →

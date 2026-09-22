@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Zap } from 'lucide-react';
 
 interface NavbarProps {
   onNavClick: (id: string) => void;
@@ -9,14 +9,31 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [openToWork, setOpenToWork] = useState<boolean>(() => {
+    try { return localStorage.getItem('openToWork') === 'true'; } catch { return false; }
+  });
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };
 
+    const handleKeydown = (e: KeyboardEvent) => {
+      if (e.shiftKey && e.key === 'H') {
+        setOpenToWork(prev => {
+          const next = !prev;
+          localStorage.setItem('openToWork', String(next));
+          return next;
+        });
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeydown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeydown);
+    };
   }, []);
 
   const navLinks = [
@@ -69,6 +86,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
 
           {/* Right CTA Button */}
           <div className="hidden md:flex items-center gap-4">
+            {/* Open-to-work badge — toggle with Shift+H */}
+            <AnimatePresence>
+              {openToWork && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.3 }}
+                  className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold uppercase tracking-widest"
+                >
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  </span>
+                  <Zap className="w-3 h-3" />
+                  Available for Hire
+                </motion.div>
+              )}
+            </AnimatePresence>
             <a
               href="/assets/Ammi_Reddy_Tetala_Resume.pdf"
               target="_blank"
