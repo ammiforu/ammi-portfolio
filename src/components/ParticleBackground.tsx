@@ -1,19 +1,18 @@
 import { useCallback } from "react";
-import Particles from "react-tsparticles";
+import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { Engine } from "tsparticles-engine";
+import type { Engine } from "@tsparticles/engine";
 
 export function ParticleBackground() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    // loadSlim brings in only the features we need for basic particles
+  const init = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
+    <ParticlesProvider init={init}>
+      <Particles
+        id="tsparticles"
+        options={{
         background: {
           color: {
             value: "transparent",
@@ -68,7 +67,8 @@ export function ParticleBackground() {
           number: {
             density: {
               enable: true,
-              area: 800,
+              width: 800,
+              height: 800,
             },
             value: 60,
           },
@@ -86,5 +86,6 @@ export function ParticleBackground() {
       }}
       className="absolute inset-0 z-0 pointer-events-auto"
     />
+    </ParticlesProvider>
   );
 }
