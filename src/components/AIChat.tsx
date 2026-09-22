@@ -2,52 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles, Loader2 } from 'lucide-react';
 
-// ─── Resume knowledge base for FAQ fallback ───────────────────────────────────
-const RESUME_CONTEXT = `
-You are Ammi Reddy Tetala's AI portfolio assistant. Answer recruiter/hiring-manager questions about Ammi concisely and professionally.
 
-ABOUT AMMI:
-- Full name: Ammi Reddy Tetala
-- Current role: Enterprise IT Manager at GEODIS (global 3PL company)
-- Location: Franklin, TN (open to remote)
-- Experience: 20+ years in enterprise IT
-- Contact: ammitetala@gmail.com | +1 (925) 663-5429
 
-CURRENT ROLE (GEODIS, 2019-Present):
-- Leads 14-person global engineering team across US and India
-- Manages IBM Sterling B2B Integrator (EDI/B2B), WMS (Manhattan Associates), IBM MQ messaging
-- Onboarded 500+ trading partners across retail, grocery, automotive, pharmaceutical verticals
-- Built AuthPortal: internal employee authentication system (MSAL, Azure AD, React)
-- Engineered EDI automation reducing manual touchpoints by 70%
-
-PREVIOUS EXPERIENCE:
-- Levi Strauss & Co — IT Specialist (2016-2019): EDI integrations, B2B onboarding
-- Cross Country Healthcare — Middleware Developer (2013-2016): IBM MQ, WebSphere
-- Earlier roles in IBM WebSphere, middleware at various companies from 2004
-
-KEY TECHNICAL SKILLS:
-- Enterprise: IBM Sterling B2B Integrator, IBM MQ, WMS, EDI (X12, EDIFACT, AS2, SFTP)
-- Cloud: GCP, Azure (Azure AD, MSAL), AWS basics
-- AI/ML: LLMs, RAG pipelines, Gemini API, Python AI tooling, local model deployment
-- Dev: React, TypeScript, Node.js, FastAPI, Python, SQL
-- Infrastructure: Linux, Docker, enterprise networking
-
-AI PROJECTS:
-- YouTube AI Automation: Solo-built end-to-end pipeline (scripting → AI generation → audio synthesis → thumbnail automation → publishing) via self-hosted FastAPI proxy. Channel @ammiexplains has 1,670+ subscribers, 624K+ total views
-- Local AI Cluster: Deployed local LLM inference cluster
-- AuthPortal: Enterprise IAM system built solo
-
-MEDIA:
-- YouTube: @ammiexplains (English), @ViswaDarshiniUsa (Telugu)
-- 10 YouTube channels total in portfolio
-
-AVAILABILITY:
-- Open to: Senior IT Manager, Enterprise Architect, AI Solutions Lead, VP of IT roles
-- Works best in: enterprise environments, complex integration challenges
-- Can start: negotiable (currently employed)
-
-PERSONALITY: Direct, systems-thinker, builder-mentality. Not just a manager — also writes code.
-`;
 
 const FAQ: Record<string, string> = {
   experience: "Ammi has **20+ years** of enterprise IT experience, currently leading a 14-person global engineering team at GEODIS (one of the world's largest 3PL companies). He manages IBM Sterling B2B, WMS, and IBM MQ infrastructure at scale.",
@@ -75,30 +31,16 @@ function matchFAQ(query: string): string | null {
   return null;
 }
 
-async function askGemini(userMessage: string, history: { role: string; text: string }[]): Promise<string> {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-  if (!apiKey) return '';
-
-  const contents = [
-    { role: 'user', parts: [{ text: RESUME_CONTEXT + '\n\nUser question: ' + userMessage }] },
-  ];
-
-  // include recent history
-  history.slice(-4).forEach(h => {
-    contents.push({ role: h.role === 'assistant' ? 'model' : 'user', parts: [{ text: h.text }] });
-  });
-
+async function askGemini(userMessage: string): Promise<string> {
   try {
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents }),
-      }
-    );
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userMessage }),
+    });
+    if (!res.ok) return '';
     const data = await res.json();
-    return data.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
+    return data.reply ?? '';
   } catch {
     return '';
   }
@@ -152,9 +94,8 @@ export const AIChat: React.FC = () => {
     // Try FAQ match first (instant, no API needed)
     const faqAnswer = matchFAQ(text);
 
-    // Try Gemini if key available
-    const history = messages.map(m => ({ role: m.role, text: m.text }));
-    const geminiAnswer = await askGemini(text, history);
+    // Try secure server-side proxy (key never exposed to browser)
+    const geminiAnswer = await askGemini(text);
 
     const answer = geminiAnswer || faqAnswer || "I'd recommend reaching out to Ammi directly at ammitetala@gmail.com for that specific question. He responds quickly!";
 
