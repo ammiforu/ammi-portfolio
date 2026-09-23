@@ -15,6 +15,7 @@ export const Projects: React.FC = () => {
       visualBg: 'from-amber-950/50 via-[#1a1309] to-black',
       codeSnippet: 'services.AddHostedService<OracleTransactionMonitoringWorker>();',
       previewImg: '/assets/ammi/projects_authportal_bg.jpg',
+      imgPosition: 'object-[center_12%]',
       badge: 'SOLO-BUILT AT GEODIS',
     },
     {
@@ -28,6 +29,7 @@ export const Projects: React.FC = () => {
       visualBg: 'from-red-950/40 via-[#150a0a] to-black',
       codeSnippet: 'uvicorn proxy.main:app --host 0.0.0.0 --port 8000 --workers 4',
       previewImg: '/assets/ammi/projects_youtube_bg.jpg',
+      imgPosition: 'object-[center_8%]',
       badge: '10 CHANNELS POWERED',
       link: 'https://www.youtube.com/@ammiexplains',
     },
@@ -42,6 +44,7 @@ export const Projects: React.FC = () => {
       visualBg: 'from-blue-950/40 via-[#0a101f] to-black',
       codeSnippet: 'SELECT envelope_id, sender_id, status FROM b2b_x12_inbound WHERE doc_type = 856;',
       previewImg: '/assets/ammi/projects_edi_bg.jpg',
+      imgPosition: 'object-[center_28%]',
       badge: '99.99% TRANSACTION SLA',
     },
     {
@@ -55,6 +58,7 @@ export const Projects: React.FC = () => {
       visualBg: 'from-emerald-950/40 via-[#071710] to-black',
       codeSnippet: 'runmqsc QMGR01 <<EOF\nREFRESH SECURITY TYPE(SSL)\nEOF',
       previewImg: '/assets/ammi/projects_mq_bg.jpg',
+      imgPosition: 'object-[center_16%]',
       badge: 'ZERO DOWNTIME ROTATION',
     },
   ];
@@ -141,30 +145,31 @@ export const Projects: React.FC = () => {
                 </div>
 
                 {/* Right Visual Box */}
-                <div className="lg:col-span-5 relative h-72 md:h-84 rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between p-6 bg-black transition-transform duration-700 group-hover:scale-[1.02]">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.visualBg} opacity-70 z-10 mix-blend-multiply`} />
+                <div className="lg:col-span-5 relative h-80 md:h-[350px] rounded-2xl overflow-hidden border border-white/20 flex flex-col justify-between p-6 bg-[#0a0a0f] transition-all duration-700 group-hover:scale-[1.02] shadow-[0_16px_50px_rgba(0,0,0,0.7)] group-hover:border-[#e2c392]/40">
+                  {/* Bottom fade only - leaves face and screens 100% illuminated, bright, and sharp */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 via-40% to-transparent z-10 pointer-events-none" />
                   
-                  {/* FULL BLEED BACKGROUND IMAGE */}
+                  {/* FULL BLEED BACKGROUND IMAGE - CRISP, ILLUMINATED & FULL COLOR */}
                   <img
                     src={project.previewImg}
                     alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 z-0 grayscale group-hover:grayscale-0 mix-blend-screen"
+                    className={`absolute inset-0 w-full h-full object-cover ${project.imgPosition || 'object-center'} brightness-[1.08] contrast-[1.05] opacity-100 group-hover:scale-105 transition-all duration-700 z-0`}
                   />
 
                   <div className="relative z-20 flex items-center justify-between">
-                    <div className="p-3 rounded-xl bg-black/70 backdrop-blur-md border border-white/10">
+                    <div className="p-3 rounded-xl bg-black/70 backdrop-blur-md border border-white/20 text-[#e2c392] shadow-xl">
                       {project.icon}
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-[#e2c392] bg-black/60 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md shadow-xl">
+                      <span className="text-[10px] font-mono text-[#e2c392] bg-black/80 px-3 py-1 rounded-full border border-white/20 backdrop-blur-md shadow-xl font-medium tracking-wide">
                         {project.status}
                       </span>
                     </div>
                   </div>
 
                   {/* Terminal snippet */}
-                  <div className="relative z-20 p-4 rounded-xl bg-black/85 backdrop-blur-md border border-white/10 font-mono text-[11px] text-[#9496a8] overflow-x-auto whitespace-pre mt-auto transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 shadow-2xl">
-                    <span className="text-emerald-400">$ </span>{project.codeSnippet}
+                  <div className="relative z-20 p-3.5 rounded-xl bg-black/85 backdrop-blur-md border border-white/15 font-mono text-[11px] text-[#9496a8] overflow-x-auto whitespace-pre mt-auto transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500 shadow-2xl">
+                    <span className="text-emerald-400 font-bold">$ </span>{project.codeSnippet}
                   </div>
                 </div>
               </div>

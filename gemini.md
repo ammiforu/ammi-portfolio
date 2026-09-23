@@ -24,7 +24,7 @@
   - `Navbar.tsx`: Glass sticky header, Recruiter Mode Toggle, 60s Brief button, & mobile fullscreen overlay menu
   - `About.tsx`: GEODIS 14-person global team (US & India), 7+ years supply chain tech, real photo badge
   - `Marquee.tsx`: Refined horizontal competency ticker
-  - `Projects.tsx`: Verified showcases: AuthPortal (ASP.NET Core/C#/PostgreSQL), YouTube AI Content Automation (FastAPI/10 channels), Enterprise EDI (IBM Sterling/856 ASN), IBM MQ TLS Zero-Downtime Fix
+  - `Projects.tsx`: High-visibility illuminated showcases with full-color clarity and custom focal framing: AuthPortal (ASP.NET Core/C#/PostgreSQL), YouTube AI Content Automation (FastAPI/10 channels), Enterprise EDI (IBM Sterling/856 ASN), IBM MQ TLS Zero-Downtime Fix
   - `Skills.tsx`: Verified competencies: EDI (X12/EDIFACT), IBM MQ, Python, Bash, ASP.NET Core, Hadoop, Linux, Grafana
   - `Services.tsx`: Client-focused enterprise architecture & automation offerings
   - `Journey.tsx`: Accurate chronological timeline matching resume (GEODIS IT Manager, Technical Lead, EDI Analyst, and AT&T Hadoop Engineer)
@@ -40,4 +40,4 @@
 
 ## Verification Status
 - Production Build: `npm run build` PASS (0 errors, 0 warnings).
-- Browser Subagent Live Verification: PASS (Verified Command Center 5-cluster drawer and Executive Recruiter Dossier modal).
+- Browser Subagent Live Verification: PASS (Verified project images brightness, full-color rendering, and accurate facial/monitor framing).
