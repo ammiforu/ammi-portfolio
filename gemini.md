@@ -17,9 +17,11 @@
 - **360° Hero Turntable Engine**: 32 high-resolution WebP frames extracted and rendered from Ammi's real photographic turnaround reference sheet
 - **Serverless AI Proxy**: `api/chat.ts` (Vercel Serverless Function) keeping `GEMINI_API_KEY` secure server-side
 - **Components**:
-  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece with Ammi's real photographic frames & LiveTicker
+  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece with Ammi's real photographic frames, LiveTicker & 60s Brief trigger
+  - `CommandCenterStatus.tsx`: Real-time Bloomberg-style infrastructure health bar with dual clocks (CT & UTC), 5 enterprise clusters (IBM Sterling, IBM MQ, Manhattan WMS, AuthPortal, YouTube AI) and expandable architecture drawers
+  - `ExecutiveBriefModal.tsx`: 60-Second Executive Recruiter Dossier modal with verified career summary, vital stats, target roles, and one-click action center (PDF resume, Google Meet 30-min, LinkedIn, direct email)
   - `AIChat.tsx`: Floating AI Assistant with highlighted animated pointer arrow, FAQ knowledge base & secure Gemini API proxy
-  - `Navbar.tsx`: Glass sticky header, Recruiter Mode Toggle, & mobile fullscreen overlay menu
+  - `Navbar.tsx`: Glass sticky header, Recruiter Mode Toggle, 60s Brief button, & mobile fullscreen overlay menu
   - `About.tsx`: GEODIS 14-person global team (US & India), 7+ years supply chain tech, real photo badge
   - `Marquee.tsx`: Refined horizontal competency ticker
   - `Projects.tsx`: Verified showcases: AuthPortal (ASP.NET Core/C#/PostgreSQL), YouTube AI Content Automation (FastAPI/10 channels), Enterprise EDI (IBM Sterling/856 ASN), IBM MQ TLS Zero-Downtime Fix
@@ -38,4 +40,4 @@
 
 ## Verification Status
 - Production Build: `npm run build` PASS (0 errors, 0 warnings).
-- Browser Subagent Live Verification: PASS (Verified Journey 4 roles and interactive YouTube Analytics Chart).
+- Browser Subagent Live Verification: PASS (Verified Command Center 5-cluster drawer and Executive Recruiter Dossier modal).

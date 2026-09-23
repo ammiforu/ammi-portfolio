@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight, Zap } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Zap, Sparkles } from 'lucide-react';
 
 interface NavbarProps {
   onNavClick: (id: string) => void;
+  onOpenBrief?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onNavClick, onOpenBrief }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [openToWork, setOpenToWork] = useState<boolean>(() => {
@@ -105,6 +106,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
                 </motion.div>
               )}
             </AnimatePresence>
+            {onOpenBrief && (
+              <button
+                type="button"
+                onClick={onOpenBrief}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#e2c392]/10 border border-[#e2c392]/30 text-[#e2c392] text-xs font-mono font-bold hover:bg-[#e2c392] hover:text-[#08080a] transition-all duration-300 shadow-[0_0_15px_rgba(226,195,146,0.15)] group"
+                title="Open 60-Second Executive Recruiter Dossier"
+              >
+                <Sparkles className="w-3 h-3 text-[#e2c392] group-hover:text-[#08080a]" />
+                <span>60s Brief</span>
+              </button>
+            )}
             <a
               href="/assets/Ammi_Reddy_Tetala_Resume.pdf"
               target="_blank"
@@ -160,6 +172,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
             </div>
 
             <div className="space-y-4 pt-8 border-t border-white/10">
+              {onOpenBrief && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenBrief();
+                  }}
+                  className="w-full py-4 rounded-full bg-gradient-to-r from-[#e2c392] to-[#cba36b] text-[#08080a] text-sm font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg"
+                >
+                  <Sparkles className="w-4 h-4 text-[#08080a]" />
+                  <span>60s Recruiter Dossier</span>
+                </button>
+              )}
               <a
                 href="/assets/Ammi_Reddy_Tetala_Resume.pdf"
                 target="_blank"

@@ -20,6 +20,8 @@ This project was built with a deep focus on **"Awwwards"-level aesthetics**, fea
 
 ## ✨ Key Features & Interactions
 
+- **60-Second Executive Recruiter Dossier Modal:** Instant candidate cheat-sheet with target roles, team scale, verified 99.99% uptime track record, and one-click action buttons (PDF resume, Google Meet 30-min, LinkedIn, direct email).
+- **Live Enterprise Command Center:** Bloomberg-terminal style status bar with real-time dual clocks (CT & UTC), monitoring 5 mission-critical systems (IBM Sterling, IBM MQ, Manhattan WMS, AuthPortal, YouTube AI) with expandable technical architecture specifications.
 - **360° Real Photo Turntable Engine:** Pinned GSAP ScrollTrigger canvas that smoothly rotates through 32 high-resolution photographic turnaround frames of Ammi.
 - **AI Chatbot Clone:** Intelligent floating assistant equipped with fast-path FAQ and Vercel serverless Gemini AI proxy (`api/chat.ts`) keeping secrets completely server-side. Highlighted by an animated callout and bouncing arrow.
 - **Google Calendar Direct Booking:** Instant 30-minute conversation scheduling via Google Calendar appointment system (`https://calendar.app.google/FkHk6NzDGzwhXEBn8`).

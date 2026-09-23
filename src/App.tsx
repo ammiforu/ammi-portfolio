@@ -20,9 +20,12 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { AIChat } from './components/AIChat';
 import { RecruiterProvider, RecruiterToggle } from './components/RecruiterToggle';
+import { ExecutiveBriefModal } from './components/ExecutiveBriefModal';
+import { CommandCenterStatus } from './components/CommandCenterStatus';
 
 export const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
+  const [briefOpen, setBriefOpen] = useState(false);
 
   useEffect(() => {
     const lenis = initLenis();
@@ -51,17 +54,22 @@ export const App: React.FC = () => {
         <MouseGlow />
 
         {/* Sticky Navigation Header */}
-        <Navbar onNavClick={scrollToSection} />
+        <Navbar onNavClick={scrollToSection} onOpenBrief={() => setBriefOpen(true)} />
 
         {/* Recruiter Role Toggle — floats below navbar */}
         <RecruiterToggle />
+
+        {/* Executive Recruiter Briefing Modal */}
+        <ExecutiveBriefModal isOpen={briefOpen} onClose={() => setBriefOpen(false)} />
 
         {/* Main Content Layout */}
         <main className="relative">
           <Hero
             onConnectClick={() => scrollToSection('contact')}
             onWorkClick={() => scrollToSection('work')}
+            onOpenBrief={() => setBriefOpen(true)}
           />
+          <CommandCenterStatus />
           <About />
           <Marquee />
           <Projects />

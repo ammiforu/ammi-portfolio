@@ -10,9 +10,10 @@ import { useRecruiterMode } from './RecruiterToggle';
 interface HeroProps {
   onConnectClick: () => void;
   onWorkClick: () => void;
+  onOpenBrief?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
+export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenBrief }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [ytSubs, setYtSubs] = useState(0);
   const { mode } = useRecruiterMode();
@@ -177,7 +178,19 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick }) => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center justify-end gap-4">
+            <div className="flex flex-wrap items-center justify-end gap-3 sm:gap-4">
+              {onOpenBrief && (
+                <Magnetic strength={0.3}>
+                  <button
+                    onClick={onOpenBrief}
+                    data-cursor="BRIEF"
+                    className="px-5 py-3 rounded-full bg-[#e2c392]/10 border border-[#e2c392]/50 text-[#e2c392] text-xs font-bold tracking-wider uppercase hover:bg-[#e2c392] hover:text-[#08080a] transition-all duration-300 shadow-[0_0_20px_rgba(226,195,146,0.2)] flex items-center gap-1.5"
+                  >
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>60s Brief</span>
+                  </button>
+                </Magnetic>
+              )}
               <Magnetic strength={0.3}>
                 <button
                   onClick={onWorkClick}
