@@ -40,4 +40,5 @@ Luxury editorial portfolio and interactive technical showcase for Ammi Reddy Tet
 - **Magnetic UI**: Framer Motion powered buttons that attract to cursor hover.
 - **3D Tilt Cards**: Glassmorphism cards with `rotateX` and `rotateY` tracking.
 - **Data Visualization**: Recharts Radar Chart for technical competencies.
-- **Live YouTube Data**: Automated counter integrated with real channel statistics.
+- **Live YouTube Telemetry Chart**: Interactive Recharts area chart with metric toggles, synced from Google Drive JSON (`ammi_explain_daily.json` & Archive, 43 continuous daily snapshots).
+- **Verified Career Timeline**: 4-role chronological progression matching resume (GEODIS IT Manager, Technical Lead, EDI Analyst, and AT&T Hadoop Administrator).

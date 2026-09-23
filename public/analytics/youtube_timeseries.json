@@ -1,0 +1,393 @@
+{
+  "updated_at": "2026-09-23T15:07:14.784369Z",
+  "total_days": 43,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "subscribers": 1580,
+      "total_views": 539887,
+      "weekly_views": 11801,
+      "weekly_watch_hours": 144.5,
+      "monthly_views": 37905,
+      "displayDate": "Aug 10"
+    },
+    {
+      "date": "2026-08-11",
+      "subscribers": 1580,
+      "total_views": 540496,
+      "weekly_views": 10242,
+      "weekly_watch_hours": 123.3,
+      "monthly_views": 37178,
+      "displayDate": "Aug 11"
+    },
+    {
+      "date": "2026-08-12",
+      "subscribers": 1590,
+      "total_views": 540942,
+      "weekly_views": 9134,
+      "weekly_watch_hours": 114.5,
+      "monthly_views": 37404,
+      "displayDate": "Aug 12"
+    },
+    {
+      "date": "2026-08-13",
+      "subscribers": 1590,
+      "total_views": 541635,
+      "weekly_views": 8201,
+      "weekly_watch_hours": 102.6,
+      "monthly_views": 37216,
+      "displayDate": "Aug 13"
+    },
+    {
+      "date": "2026-08-14",
+      "subscribers": 1600,
+      "total_views": 544451,
+      "weekly_views": 5642,
+      "weekly_watch_hours": 90.1,
+      "monthly_views": 37025,
+      "displayDate": "Aug 14"
+    },
+    {
+      "date": "2026-08-15",
+      "subscribers": 1610,
+      "total_views": 546215,
+      "weekly_views": 5151,
+      "weekly_watch_hours": 83.5,
+      "monthly_views": 37904,
+      "displayDate": "Aug 15"
+    },
+    {
+      "date": "2026-08-17",
+      "subscribers": 1610,
+      "total_views": 550656,
+      "weekly_views": 8858,
+      "weekly_watch_hours": 94.7,
+      "monthly_views": 41781,
+      "displayDate": "Aug 17"
+    },
+    {
+      "date": "2026-08-18",
+      "subscribers": 1610,
+      "total_views": 551582,
+      "weekly_views": 9527,
+      "weekly_watch_hours": 97.2,
+      "monthly_views": 40685,
+      "displayDate": "Aug 18"
+    },
+    {
+      "date": "2026-08-20",
+      "subscribers": 1620,
+      "total_views": 554891,
+      "weekly_views": 10621,
+      "weekly_watch_hours": 123.6,
+      "monthly_views": 42486,
+      "displayDate": "Aug 20"
+    },
+    {
+      "date": "2026-08-21",
+      "subscribers": 1620,
+      "total_views": 555764,
+      "weekly_views": 9341,
+      "weekly_watch_hours": 123.3,
+      "monthly_views": 41061,
+      "displayDate": "Aug 21"
+    },
+    {
+      "date": "2026-08-22",
+      "subscribers": 1620,
+      "total_views": 556615,
+      "weekly_views": 7089,
+      "weekly_watch_hours": 125.3,
+      "monthly_views": 40368,
+      "displayDate": "Aug 22"
+    },
+    {
+      "date": "2026-08-23",
+      "subscribers": 1620,
+      "total_views": 557244,
+      "weekly_views": 6578,
+      "weekly_watch_hours": 129.3,
+      "monthly_views": 40506,
+      "displayDate": "Aug 23"
+    },
+    {
+      "date": "2026-08-24",
+      "subscribers": 1620,
+      "total_views": 557662,
+      "weekly_views": 6154,
+      "weekly_watch_hours": 127.3,
+      "monthly_views": 40388,
+      "displayDate": "Aug 24"
+    },
+    {
+      "date": "2026-08-25",
+      "subscribers": 1620,
+      "total_views": 558520,
+      "weekly_views": 5475,
+      "weekly_watch_hours": 121.5,
+      "monthly_views": 39795,
+      "displayDate": "Aug 25"
+    },
+    {
+      "date": "2026-08-26",
+      "subscribers": 1630,
+      "total_views": 559195,
+      "weekly_views": 4770,
+      "weekly_watch_hours": 114.0,
+      "monthly_views": 39255,
+      "displayDate": "Aug 26"
+    },
+    {
+      "date": "2026-08-27",
+      "subscribers": 1630,
+      "total_views": 561083,
+      "weekly_views": 3801,
+      "weekly_watch_hours": 92.7,
+      "monthly_views": 38470,
+      "displayDate": "Aug 27"
+    },
+    {
+      "date": "2026-08-28",
+      "subscribers": 1630,
+      "total_views": 565228,
+      "weekly_views": 6105,
+      "weekly_watch_hours": 100.9,
+      "monthly_views": 39387,
+      "displayDate": "Aug 28"
+    },
+    {
+      "date": "2026-08-29",
+      "subscribers": 1630,
+      "total_views": 568023,
+      "weekly_views": 8995,
+      "weekly_watch_hours": 99.0,
+      "monthly_views": 39867,
+      "displayDate": "Aug 29"
+    },
+    {
+      "date": "2026-08-30",
+      "subscribers": 1630,
+      "total_views": 570322,
+      "weekly_views": 10970,
+      "weekly_watch_hours": 102.9,
+      "monthly_views": 41624,
+      "displayDate": "Aug 30"
+    },
+    {
+      "date": "2026-08-31",
+      "subscribers": 1630,
+      "total_views": 572218,
+      "weekly_views": 12534,
+      "weekly_watch_hours": 111.2,
+      "monthly_views": 43053,
+      "displayDate": "Aug 31"
+    },
+    {
+      "date": "2026-09-01",
+      "subscribers": 1630,
+      "total_views": 574081,
+      "weekly_views": 13598,
+      "weekly_watch_hours": 122.4,
+      "monthly_views": 43416,
+      "displayDate": "Sep 01"
+    },
+    {
+      "date": "2026-09-02",
+      "subscribers": 1640,
+      "total_views": 576564,
+      "weekly_views": 13891,
+      "weekly_watch_hours": 132.8,
+      "monthly_views": 43713,
+      "displayDate": "Sep 02"
+    },
+    {
+      "date": "2026-09-03",
+      "subscribers": 1640,
+      "total_views": 578490,
+      "weekly_views": 15021,
+      "weekly_watch_hours": 143.6,
+      "monthly_views": 44486,
+      "displayDate": "Sep 03"
+    },
+    {
+      "date": "2026-09-04",
+      "subscribers": 1640,
+      "total_views": 578490,
+      "weekly_views": 13458,
+      "weekly_watch_hours": 147.0,
+      "monthly_views": 43516,
+      "displayDate": "Sep 04"
+    },
+    {
+      "date": "2026-09-05",
+      "subscribers": 1650,
+      "total_views": 589375,
+      "weekly_views": 14677,
+      "weekly_watch_hours": 164.2,
+      "monthly_views": 44646,
+      "displayDate": "Sep 05"
+    },
+    {
+      "date": "2026-09-06",
+      "subscribers": 1650,
+      "total_views": 599488,
+      "weekly_views": 19776,
+      "weekly_watch_hours": 205.7,
+      "monthly_views": 51087,
+      "displayDate": "Sep 06"
+    },
+    {
+      "date": "2026-09-07",
+      "subscribers": 1650,
+      "total_views": 602799,
+      "weekly_views": 27231,
+      "weekly_watch_hours": 255.4,
+      "monthly_views": 59588,
+      "displayDate": "Sep 07"
+    },
+    {
+      "date": "2026-09-08",
+      "subscribers": 1650,
+      "total_views": 604616,
+      "weekly_views": 28525,
+      "weekly_watch_hours": 259.4,
+      "monthly_views": 62500,
+      "displayDate": "Sep 08"
+    },
+    {
+      "date": "2026-09-09",
+      "subscribers": 1650,
+      "total_views": 604616,
+      "weekly_views": 29496,
+      "weekly_watch_hours": 253.2,
+      "monthly_views": 65210,
+      "displayDate": "Sep 09"
+    },
+    {
+      "date": "2026-09-10",
+      "subscribers": 1650,
+      "total_views": 609339,
+      "weekly_views": 28914,
+      "weekly_watch_hours": 244.4,
+      "monthly_views": 64670,
+      "displayDate": "Sep 10"
+    },
+    {
+      "date": "2026-09-11",
+      "subscribers": 1650,
+      "total_views": 611047,
+      "weekly_views": 26908,
+      "weekly_watch_hours": 224.7,
+      "monthly_views": 64161,
+      "displayDate": "Sep 11"
+    },
+    {
+      "date": "2026-09-12",
+      "subscribers": 1650,
+      "total_views": 611643,
+      "weekly_views": 21204,
+      "weekly_watch_hours": 173.0,
+      "monthly_views": 62560,
+      "displayDate": "Sep 12"
+    },
+    {
+      "date": "2026-09-13",
+      "subscribers": 1650,
+      "total_views": 613229,
+      "weekly_views": 13195,
+      "weekly_watch_hours": 109.9,
+      "monthly_views": 62464,
+      "displayDate": "Sep 13"
+    },
+    {
+      "date": "2026-09-14",
+      "subscribers": 1650,
+      "total_views": 614206,
+      "weekly_views": 10425,
+      "weekly_watch_hours": 87.5,
+      "monthly_views": 62256,
+      "displayDate": "Sep 14"
+    },
+    {
+      "date": "2026-09-15",
+      "subscribers": 1650,
+      "total_views": 614745,
+      "weekly_views": 8167,
+      "weekly_watch_hours": 81.0,
+      "monthly_views": 62051,
+      "displayDate": "Sep 15"
+    },
+    {
+      "date": "2026-09-16",
+      "subscribers": 1660,
+      "total_views": 616688,
+      "weekly_views": 6566,
+      "weekly_watch_hours": 65.9,
+      "monthly_views": 60461,
+      "displayDate": "Sep 16"
+    },
+    {
+      "date": "2026-09-17",
+      "subscribers": 1660,
+      "total_views": 619695,
+      "weekly_views": 6221,
+      "weekly_watch_hours": 59.9,
+      "monthly_views": 60902,
+      "displayDate": "Sep 17"
+    },
+    {
+      "date": "2026-09-18",
+      "subscribers": 1660,
+      "total_views": 620419,
+      "weekly_views": 8803,
+      "weekly_watch_hours": 68.5,
+      "monthly_views": 64130,
+      "displayDate": "Sep 18"
+    },
+    {
+      "date": "2026-09-19",
+      "subscribers": 1670,
+      "total_views": 622552,
+      "weekly_views": 9061,
+      "weekly_watch_hours": 64.5,
+      "monthly_views": 64907,
+      "displayDate": "Sep 19"
+    },
+    {
+      "date": "2026-09-20",
+      "subscribers": 1660,
+      "total_views": 623018,
+      "weekly_views": 9445,
+      "weekly_watch_hours": 61.4,
+      "monthly_views": 65536,
+      "displayDate": "Sep 20"
+    },
+    {
+      "date": "2026-09-21",
+      "subscribers": 1670,
+      "total_views": 624385,
+      "weekly_views": 9311,
+      "weekly_watch_hours": 53.5,
+      "monthly_views": 65793,
+      "displayDate": "Sep 21"
+    },
+    {
+      "date": "2026-09-22",
+      "subscribers": 1670,
+      "total_views": 624914,
+      "weekly_views": 8741,
+      "weekly_watch_hours": 47.1,
+      "monthly_views": 65798,
+      "displayDate": "Sep 22"
+    },
+    {
+      "date": "2026-09-23",
+      "subscribers": 1670,
+      "total_views": 625137,
+      "weekly_views": 6648,
+      "weekly_watch_hours": 36.8,
+      "monthly_views": 63757,
+      "displayDate": "Sep 23"
+    }
+  ]
+}

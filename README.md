@@ -29,6 +29,8 @@ This project was built with a deep focus on **"Awwwards"-level aesthetics**, fea
 - **Magnetic UI Buttons:** Primary call-to-action buttons physically pull towards the user's cursor on hover for a tactile, luxury-web feel.
 - **3D Tilt Cards:** Skill cards and project showcases apply 3D `rotateX` and `rotateY` transforms based on mouse position.
 - **Data Visualization:** A responsive glowing radar chart that visualizes technical competencies across AI, Enterprise Architecture, Cloud, and Data.
+- **Live Media Analytics & Growth Chart:** Interactive Recharts area chart with multi-metric toggles, synced directly from Google Drive daily telemetry JSON (`ammi_explain_daily.json` & Archive, 43 consecutive daily snapshots).
+- **Verified Career Timeline:** Accurate chronological timeline matching resume across GEODIS (IT Manager, Technical Lead, EDI Analyst) and AT&T (Hadoop Administrator).
 
 ## 🚀 Live Demo & Portal Details
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Globe, Brain, Video, Sparkles, CheckCircle2, TrendingUp, Eye, Users, Clock } from 'lucide-react';
 import { YoutubeIcon } from './Icons';
 import { AnimatedCounter } from './AnimatedCounter';
+import { YouTubeAnalyticsChart } from './YouTubeAnalyticsChart';
 
 interface ChannelAnalytics {
   subscribers: number;
@@ -117,6 +118,9 @@ export const MediaChannels: React.FC = () => {
             ⚡ Live data · Last synced {lastUpdated}
           </p>
         )}
+
+        {/* Live Recharts Telemetry Chart synced from Google Drive */}
+        <YouTubeAnalyticsChart />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {channels.map((ch, idx) => (

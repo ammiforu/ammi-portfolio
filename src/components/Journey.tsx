@@ -3,32 +3,44 @@ import { motion } from 'framer-motion';
 const journeyData = [
   {
     role: "IT Manager",
-    company: "GEODIS",
-    period: "2022 - Present",
+    company: "GEODIS — Franklin, TN",
+    period: "May 2025 — Present",
     details: [
-      "Manage a 14-person global team covering EDI operations, WMS systems, Linux infrastructure, and IBM MQ",
-      "Built custom, AI-assisted automation to take over repetitive manual work in EDI/WMS operations",
-      "Rolled out Grafana dashboards for real-time system health and pipeline monitoring"
+      "Manage a 14-person global team across the U.S. and India covering EDI operations, WMS systems, RHEL Linux infrastructure, and IBM MQ.",
+      "Rolled out real-time Grafana dashboards for proactive pipeline visibility, shifting team triage from reactive alerts to pre-emptive incident resolution.",
+      "Built custom, AI-assisted automation to eliminate repetitive manual work across EDI/WMS operational workflows.",
+      "Lead root-cause investigations on EDI/WMS discrepancies (ASN/856 confirmation mismatches) for major retail accounts.",
+      "Resolved an IBM MQ TLS/SSL handshake failure on a production queue manager following certificate rotation with zero service downtime.",
+      "Re-engineered RHEL bash file-splitting scripts with lock-file concurrency safety and line-ending normalization."
     ]
   },
   {
     role: "Technical Lead",
-    company: "GEODIS",
-    period: "2021 - 2022",
+    company: "GEODIS — Franklin, TN",
+    period: "Nov 2021 — May 2025",
     details: [
-      "Go-to person for complex EDI/WMS integration problems mapping and data validation through IBM Sterling",
-      "Kept integration servers patched and maintained implementation documentation",
-      "Started building AuthPortal as a solo project for internal ops automation"
+      "Go-to technical authority for complex EDI/WMS integration problems, data validation, and X12 mapping through IBM Sterling B2B Integrator.",
+      "Maintained integration server patching, authored implementation documentation, and established team SOPs.",
+      "Architected and initiated AuthPortal as a solo project — full-stack ASP.NET Core & PostgreSQL internal operations platform for on-call scheduling and server health monitoring."
     ]
   },
   {
-    role: "Hadoop Engineer / Sr. Administrator",
-    company: "AT&T",
-    period: "2017 - 2020",
+    role: "Electronic Data Interchange (EDI) Analyst",
+    company: "GEODIS — Franklin, TN",
+    period: "Jul 2020 — Nov 2021",
     details: [
-      "Built and ran multi-node Hadoop clusters (HDFS, YARN, Hive, Kafka, Spark) for large-scale data ingestion",
-      "Managed a 7-person team supporting Hadoop infrastructure and EDI onboarding",
-      "Handled cluster upgrades, security hardening (Kerberos/LDAP), and performance tuning"
+      "Main point of contact for EDI transaction status across procurement sets (832, 850, 855, 860, 865, 856) and financial sets (810, 820, 824).",
+      "Onboarded new enterprise clients onto GEODIS EDI systems, setting up and maintaining AS2, SFTP, and FTP communication pipelines."
+    ]
+  },
+  {
+    role: "Hadoop Engineer / Sr. Hadoop Administrator",
+    company: "AT&T — Austin, TX",
+    period: "Sep 2017 — Jul 2020",
+    details: [
+      "Built and operated multi-node Hadoop clusters (Cloudera/Hortonworks: HDFS, YARN, Hive, Kafka, Spark, Flume) for high-scale data ingestion and analytics.",
+      "Managed a 7-person team (4 onshore, 3 offshore) supporting Hadoop infrastructure and EDI onboarding through GXS / OpenText BizManager.",
+      "Handled production cluster upgrades, Kerberos/LDAP security hardening, and performance tuning."
     ]
   }
 ];
@@ -54,7 +66,7 @@ export function Journey() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mt-6 text-xl text-[var(--text-secondary)] font-jakarta max-w-2xl mx-auto"
           >
-            20+ years of enterprise integration excellence
+            7+ years of supply chain tech leadership & enterprise systems integration
           </motion.p>
         </div>
 

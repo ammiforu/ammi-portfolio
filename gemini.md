@@ -25,12 +25,17 @@
   - `Projects.tsx`: Verified showcases: AuthPortal (ASP.NET Core/C#/PostgreSQL), YouTube AI Content Automation (FastAPI/10 channels), Enterprise EDI (IBM Sterling/856 ASN), IBM MQ TLS Zero-Downtime Fix
   - `Skills.tsx`: Verified competencies: EDI (X12/EDIFACT), IBM MQ, Python, Bash, ASP.NET Core, Hadoop, Linux, Grafana
   - `Services.tsx`: Client-focused enterprise architecture & automation offerings
+  - `Journey.tsx`: Accurate chronological timeline matching resume (GEODIS IT Manager, Technical Lead, EDI Analyst, and AT&T Hadoop Engineer)
   - `Achievements.tsx`: Milestones (MQ TLS recovery, BizManager upgrades, Grafana rollout, Hadoop at AT&T) & Degrees (MS Information Systems Security, MS CS, BS CS)
   - `Testimonials.tsx`: Honest track record & enterprise references on request + verified LinkedIn connect CTA
-  - `MediaChannels.tsx`: YouTube Flagship channel @ammiexplains and @ViswaDarshiniUsa
+  - `MediaChannels.tsx`: YouTube Flagship channel @ammiexplains, @ViswaDarshiniUsa, and embedded live telemetry
+  - `YouTubeAnalyticsChart.tsx`: Interactive Recharts telemetry chart synced from Google Drive JSON (43 daily snapshots tracking views, subscribers, velocity, watch hours)
   - `Contact.tsx`: Direct email, phone, canonical LinkedIn, GitHub, YouTube, inquiry form, and instant Google Calendar Appointment Scheduling
   - `CustomCursor.tsx`: Smooth follower with VIEW/EXPLORE expansion
 
+## Automation & Sync Pipeline
+- `scripts/sync_youtube_analytics.py`: Syncs daily analytics and archive history from `G:\My Drive\Ammi Explains\Analytics\` into `public/analytics/`
+
 ## Verification Status
 - Production Build: `npm run build` PASS (0 errors, 0 warnings).
-- Browser Subagent Live Verification: PASS (Hero 360 rotation, real photo rendering, @ammiexplains URLs confirmed).
+- Browser Subagent Live Verification: PASS (Verified Journey 4 roles and interactive YouTube Analytics Chart).
