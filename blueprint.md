@@ -38,7 +38,7 @@ Luxury editorial portfolio and interactive technical showcase for Ammi Reddy Tet
 - **Responsive Sizing**: 75–85% viewport height dominance with zero layout shifts.
 
 ## Advanced Interactions & Features
-- **60-Second Recruiter Dossier Modal**: Instant executive cheat-sheet with target roles, team scale, verified 99.99% uptime, and one-click actions (PDF resume, Google Meet, LinkedIn, email).
+- **60-Second Recruiter Dossier Modal**: Instant executive cheat-sheet with target roles, team scale, verified 99.99% uptime, and one-click actions (PDF resume, Google Meet, LinkedIn, email) with background scroll lock and Lenis wheel isolation.
 - **Enterprise Command Center**: Bloomberg-style live status bar with dual real-time clocks (CT & UTC), 5 monitored enterprise clusters (IBM Sterling, IBM MQ, Manhattan WMS, UIP — Unified Integration Portal, YouTube AI) and expandable technical specification drawers.
 - **AI Chatbot**: Intelligent assistant with FAQ fast-path + serverless Gemini API proxy, highlighted by an eye-catching animated callout and bouncing arrow.
 - **Direct Google Calendar Booking**: One-click 30-min conversation scheduling via `https://calendar.app.google/FkHk6NzDGzwhXEBn8`.

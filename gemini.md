@@ -45,4 +45,4 @@
 
 ## Verification Status
 - Production Build: `npm run build` PASS (0 errors, 0 warnings).
-- Browser Subagent Live Verification: PASS (Verified 45s audio brief waveform, interactive architecture incident simulator, ROI calculator slider math, project dossier modal, and docked floating AI widget).
+- Browser Subagent Live Verification: PASS (Verified 60s brief modal scroll lock, preventing background Lenis scroll bleed while maintaining smooth inner modal scrolling).

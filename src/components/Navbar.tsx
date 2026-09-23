@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight, Zap, Sparkles } from 'lucide-react';
+import { lockScroll } from '../lib/lenis';
 
 interface NavbarProps {
   onNavClick: (id: string) => void;
@@ -13,6 +14,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick, onOpenBrief }) => {
   const [openToWork, setOpenToWork] = useState<boolean>(() => {
     try { return localStorage.getItem('openToWork') === 'true'; } catch { return false; }
   });
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const unlock = lockScroll();
+    return () => {
+      unlock();
+    };
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -154,7 +163,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick, onOpenBrief }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-100%' }}
             transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-40 bg-[#08080a] flex flex-col justify-between p-8 md:hidden"
+            className="fixed inset-0 z-40 bg-[#08080a] flex flex-col justify-between p-8 md:hidden overscroll-contain overflow-y-auto"
+            data-lenis-prevent
           >
             <div className="pt-24 flex flex-col space-y-6">
               {navLinks.map((link, idx) => (

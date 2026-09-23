@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { lockScroll } from '../lib/lenis';
 import {
   X,
   Download,
@@ -26,15 +27,17 @@ export const ExecutiveBriefModal: React.FC<ExecutiveBriefModalProps> = ({
   onClose,
 }) => {
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
-    }
+
+    const unlock = lockScroll();
+    window.addEventListener('keydown', handleKeyDown);
+
     return () => {
-      document.body.style.overflow = 'unset';
+      unlock();
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
@@ -42,14 +45,17 @@ export const ExecutiveBriefModal: React.FC<ExecutiveBriefModalProps> = ({
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden"
+          data-lenis-prevent
+        >
           {/* Backdrop blur */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#040407]/85 backdrop-blur-xl"
+            className="fixed inset-0 bg-[#040407]/85 backdrop-blur-xl touch-none"
           />
 
           {/* Modal Container */}
@@ -58,7 +64,8 @@ export const ExecutiveBriefModal: React.FC<ExecutiveBriefModalProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-3xl my-8 rounded-3xl bg-[#0c0d16] border border-white/15 shadow-[0_0_80px_rgba(226,195,146,0.18)] p-6 sm:p-10 space-y-7 z-10 max-h-[90vh] overflow-y-auto editorial-border"
+            className="relative w-full max-w-3xl my-auto rounded-3xl bg-[#0c0d16] border border-white/15 shadow-[0_0_80px_rgba(226,195,146,0.18)] p-6 sm:p-10 space-y-7 z-10 max-h-[90vh] overflow-y-auto overscroll-contain editorial-border"
+            data-lenis-prevent
           >
             {/* Ambient Corner Glow */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-[#e2c392]/10 rounded-full blur-3xl pointer-events-none" />

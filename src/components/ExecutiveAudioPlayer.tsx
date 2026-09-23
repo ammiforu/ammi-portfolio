@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, Volume2, Sparkles, FileText, X } from 'lucide-react';
+import { lockScroll } from '../lib/lenis';
 
 const EXECUTIVE_TRANSCRIPT = 
   "Hello, I'm Ammi Reddy Tetala. For over 13 years, I have engineered and scaled mission-critical enterprise systems—currently leading a 14-person global team at GEODIS covering EDI, Manhattan WMS, and IBM MQ infrastructure. I bridge resilient enterprise backbones with modern autonomous AI pipelines. Take a look through my live telemetry and system architecture explorer, or click let's connect to schedule a direct conversation.";
@@ -11,6 +12,14 @@ export const ExecutiveAudioPlayer: React.FC = () => {
   const [showTranscript, setShowTranscript] = useState<boolean>(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const intervalRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (!showTranscript) return;
+    const unlock = lockScroll();
+    return () => {
+      unlock();
+    };
+  }, [showTranscript]);
 
   useEffect(() => {
     return () => {
@@ -135,12 +144,21 @@ export const ExecutiveAudioPlayer: React.FC = () => {
       {/* Transcript Modal */}
       <AnimatePresence>
         {showTranscript && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-hidden"
+            data-lenis-prevent
+          >
+            {/* Backdrop click dismiss */}
+            <div
+              onClick={() => setShowTranscript(false)}
+              className="fixed inset-0 touch-none"
+            />
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="max-w-md w-full p-6 rounded-2xl bg-[#0c0d18] border border-white/15 shadow-2xl space-y-4"
+              className="relative max-w-md w-full p-6 rounded-2xl bg-[#0c0d18] border border-white/15 shadow-2xl space-y-4 z-10 overscroll-contain"
+              data-lenis-prevent
             >
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
                 <div className="flex items-center gap-2 text-xs font-mono text-[var(--accent-cyan)]">

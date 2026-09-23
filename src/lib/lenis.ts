@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 let lenisInstance: Lenis | null = null;
+let lockCount = 0;
 
 export function initLenis(): Lenis {
   if (lenisInstance) return lenisInstance;
@@ -30,4 +31,33 @@ export function initLenis(): Lenis {
 
 export function getLenis(): Lenis | null {
   return lenisInstance;
+}
+
+/**
+ * Completely freeze window and Lenis scrolling while a modal/popup is open
+ */
+export function lockScroll(): () => void {
+  lockCount++;
+
+  if (lockCount === 1) {
+    if (lenisInstance) {
+      lenisInstance.stop();
+    }
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  let released = false;
+  return () => {
+    if (released) return;
+    released = true;
+    lockCount = Math.max(0, lockCount - 1);
+    if (lockCount === 0) {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+      if (lenisInstance) {
+        lenisInstance.start();
+      }
+    }
+  };
 }

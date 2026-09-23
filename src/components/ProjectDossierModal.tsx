@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle2, Terminal, Layers, ArrowUpRight, Cpu } from 'lucide-react';
+import { lockScroll } from '../lib/lenis';
 
 export interface ProjectDossierData {
   id: string;
@@ -131,19 +132,45 @@ interface ProjectDossierModalProps {
 }
 
 export const ProjectDossierModal: React.FC<ProjectDossierModalProps> = ({ projectId, onClose }) => {
+  useEffect(() => {
+    if (!projectId) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+
+    const unlock = lockScroll();
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      unlock();
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [projectId, onClose]);
+
   if (!projectId) return null;
   const dossier = PROJECT_DOSSIERS[projectId];
   if (!dossier) return null;
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-black/85 backdrop-blur-xl overflow-y-auto">
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 overflow-hidden"
+        data-lenis-prevent
+      >
+        {/* Backdrop blur */}
+        <div
+          onClick={onClose}
+          className="fixed inset-0 bg-black/85 backdrop-blur-xl touch-none"
+        />
+
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#0a0b12] border border-white/15 p-6 md:p-10 shadow-2xl space-y-8"
+          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto overscroll-contain rounded-3xl bg-[#0a0b12] border border-white/15 p-6 md:p-10 shadow-2xl space-y-8 z-10"
+          data-lenis-prevent
         >
           {/* Header */}
           <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-6">
