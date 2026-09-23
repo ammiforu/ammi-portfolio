@@ -8,11 +8,11 @@ export const Projects: React.FC = () => {
   const projects = [
     {
       id: 'auth-portal',
-      title: 'AuthPortal — Enterprise Ops Automation Platform',
+      title: 'UIP — Unified Integration Portal',
       category: 'ENTERPRISE FULL-STACK & BACKGROUND MICROSERVICES',
       tech: ['ASP.NET Core', 'C#', 'PostgreSQL', 'EF Core', 'JWT', 'PowerShell'],
       status: 'MVP IN TESTING (GEODIS)',
-      desc: 'Solo-engineered enterprise operations management platform from the ground up. Features on-call scheduling, vendor invoice automated reconciliation, and 5+ background services for continuous server health polling and Oracle transaction monitoring with automated PDF/Excel reporting.',
+      desc: 'Solo-engineered enterprise operations & integration management platform from the ground up. Features on-call scheduling, vendor invoice automated reconciliation, and 5+ background services for continuous server health polling and Oracle transaction monitoring with automated PDF/Excel reporting.',
       icon: <Database className="w-6 h-6 text-[#e2c392]" />,
       visualBg: 'from-amber-950/50 via-[#1a1309] to-black',
       codeSnippet: 'services.AddHostedService<OracleTransactionMonitoringWorker>();',

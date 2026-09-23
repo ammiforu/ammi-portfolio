@@ -29,7 +29,7 @@ export const Achievements: React.FC = () => {
       category: 'BIG DATA & INFRA',
     },
     {
-      title: 'AuthPortal Solo Engineering',
+      title: 'UIP (Unified Integration Portal) Solo Engineering',
       desc: 'Independently conceptualized and built an internal ops automation platform in ASP.NET Core, C#, and PostgreSQL with JWT auth and scheduled automated reporting.',
       category: 'FULL-STACK PLATFORM',
     },

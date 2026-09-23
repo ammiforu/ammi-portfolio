@@ -8,7 +8,7 @@ import { MessageCircle, X, Send, Bot, User, Sparkles, Loader2 } from 'lucide-rea
 const FAQ: Record<string, string> = {
   experience: "Ammi has **13+ years** of enterprise IT experience (working professionally since 2013, with 7+ years in supply chain tech at GEODIS). He currently leads a 14-person global engineering team managing IBM Sterling B2B, WMS, and IBM MQ infrastructure at scale.",
   skills: "**Enterprise:** IBM Sterling B2B Integrator, IBM MQ, WMS (Manhattan Associates), EDI (X12/EDIFACT/AS2)\n**AI/Dev:** React, Python, FastAPI, LLMs, RAG pipelines, Gemini API\n**Cloud:** GCP, Azure AD, AWS",
-  projects: "**AuthPortal** — Enterprise IAM system built solo with MSAL + Azure AD + React\n**YouTube AI Engine** — End-to-end automated content pipeline (1,670+ subscribers, 624K+ views)\n**EDI Automation** — Reduced manual touchpoints by 70% across 500+ trading partners",
+  projects: "**UIP (Unified Integration Portal)** — Enterprise operations & integration platform built solo with MSAL + Azure AD + React + ASP.NET Core\n**YouTube AI Engine** — End-to-end automated content pipeline (1,670+ subscribers, 624K+ views)\n**EDI Automation** — Reduced manual touchpoints by 70% across 500+ trading partners",
   availability: "Ammi is **open to opportunities** and can discuss timeline during conversations. He's based in Franklin, TN and open to remote roles globally.",
   contact: "📧 ammitetala@gmail.com\n📞 +1 (925) 663-5429\nBest approach: Email or use the contact form below.",
   salary: "Ammi is open to discussing compensation based on the role scope. Best to connect directly for confidential discussions.",

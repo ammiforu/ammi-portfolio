@@ -75,13 +75,13 @@ const SYSTEMS: SystemNode[] = [
     },
   },
   {
-    id: 'authportal',
-    name: 'AuthPortal Platform',
-    category: 'Enterprise Ops & IAM',
+    id: 'uip-portal',
+    name: 'UIP — Unified Integration Portal',
+    category: 'Enterprise Ops & Integration',
     status: 'active',
     uptime: '99.95% Availability',
     metrics: '5+ Background Services',
-    description: 'Internal operations platform built solo in ASP.NET Core & PostgreSQL for on-call scheduling, server health monitoring, and vendor data reconciliation.',
+    description: 'Internal operations & integration platform built solo in ASP.NET Core & PostgreSQL for on-call scheduling, server health monitoring, and vendor data reconciliation.',
     technicalSpecs: {
       protocol: 'ASP.NET Core Web API / EF Core / JWT + Refresh',
       throughput: 'Continuous automated background polling',

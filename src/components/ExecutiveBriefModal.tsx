@@ -166,7 +166,7 @@ export const ExecutiveBriefModal: React.FC<ExecutiveBriefModalProps> = ({
                     <span>Solo Platform Builder & AI Lead</span>
                   </div>
                   <p className="text-xs text-[#9496a8] font-light leading-relaxed">
-                    Solo architect of AuthPortal (ASP.NET Core/PostgreSQL) and automated multi-channel AI content pipeline operating 10 YouTube channels with 625K+ views.
+                    Solo architect of UIP (Unified Integration Portal in ASP.NET Core/PostgreSQL) and automated multi-channel AI content pipeline operating 10 YouTube channels with 625K+ views.
                   </p>
                 </div>
               </div>

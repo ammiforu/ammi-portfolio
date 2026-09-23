@@ -20,7 +20,7 @@ const VALUE_PROPS = [
   {
     icon: <Award className="w-5 h-5 text-[#e2c392]" />,
     title: "Builder, Not Just Manager",
-    desc: "Solo-built AuthPortal (enterprise IAM), YouTube AI automation pipeline, and local LLM clusters — while running full-time as IT Manager.",
+    desc: "Solo-built UIP (Unified Integration Portal), YouTube AI automation pipeline, and local LLM clusters — while running full-time as IT Manager.",
   },
 ];
 

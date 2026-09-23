@@ -20,7 +20,7 @@
 - **Components**:
   - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece, streamlined CTAs, Executive Audio Player, LiveTicker & 60s Brief trigger
   - `ExecutiveAudioPlayer.tsx`: 45-Second Executive Audio Brief with real-time dynamic frequency waveform bars and accessible transcript drawer
-  - `CommandCenterStatus.tsx`: Real-time Bloomberg-style infrastructure health bar with dual clocks (CT & UTC), 5 enterprise clusters (IBM Sterling, IBM MQ, Manhattan WMS, AuthPortal, YouTube AI) and expandable architecture drawers
+  - `CommandCenterStatus.tsx`: Real-time Bloomberg-style infrastructure health bar with dual clocks (CT & UTC), 5 enterprise clusters (IBM Sterling, IBM MQ, Manhattan WMS, UIP — Unified Integration Portal, YouTube AI) and expandable architecture drawers
   - `ExecutiveBriefModal.tsx`: 60-Second Executive Recruiter Dossier modal with verified career summary, vital stats, target roles, and one-click action center (PDF resume, Google Meet 30-min, LinkedIn, direct email)
   - `AIChat.tsx`: Non-overlapping docked floating AI assistant with fast-path FAQ knowledge base & secure Gemini API proxy
   - `Navbar.tsx`: Glass sticky header, Recruiter Mode Toggle, 60s Brief button, & mobile fullscreen overlay menu
@@ -28,7 +28,7 @@
   - `Marquee.tsx`: Refined horizontal competency ticker
   - `Projects.tsx`: High-visibility illuminated showcases with full-color clarity, custom focal framing, and deep-dive case study dossier triggers
   - `ProjectDossierModal.tsx`: Comprehensive case study postmortem drawers for all 4 core projects (challenge, solution, architecture, metrics, and production code blocks)
-  - `SystemArchitecture.tsx`: Interactive Enterprise Topology & Incident Simulator covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and AuthPortal with live incident injection
+  - `SystemArchitecture.tsx`: Interactive Enterprise Topology & Incident Simulator covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and UIP (Unified Integration Portal) with live incident injection
   - `EnterpriseCalculator.tsx`: Real-time interactive slider quantifying engineering hours saved (70% triage cut) and dollar value delivered with Google Calendar strategy booking
   - `Skills.tsx`: Verified competencies: EDI (X12/EDIFACT), IBM MQ, Python, Bash, ASP.NET Core, Hadoop, Linux, Grafana
   - `Services.tsx`: Client-focused enterprise architecture & automation offerings

@@ -21,7 +21,7 @@ const journeyData = [
     details: [
       "Go-to technical authority for complex EDI/WMS integration problems, data validation, and X12 mapping through IBM Sterling B2B Integrator.",
       "Maintained integration server patching, authored implementation documentation, and established team SOPs.",
-      "Architected and initiated AuthPortal as a solo project — full-stack ASP.NET Core & PostgreSQL internal operations platform for on-call scheduling and server health monitoring."
+      "Architected and initiated UIP (Unified Integration Portal) as a solo project — full-stack ASP.NET Core & PostgreSQL internal operations platform for on-call scheduling, server health monitoring, and data integration."
     ]
   },
   {

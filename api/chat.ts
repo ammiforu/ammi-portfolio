@@ -12,11 +12,11 @@ ABOUT AMMI:
 
 CURRENT ROLE (GEODIS, 2020-Present):
 - IT Manager (May 2025-Present): Leads 14-person global engineering team across US and India
-- Technical Lead (Nov 2021-May 2025): Go-to technical authority for EDI/WMS, author of AuthPortal
+- Technical Lead (Nov 2021-May 2025): Go-to technical authority for EDI/WMS, author of UIP (Unified Integration Portal)
 - EDI Analyst (Jul 2020-Nov 2021): High-volume trading partner onboarding and transaction monitoring
 - Manages IBM Sterling B2B Integrator (EDI/B2B), Manhattan WMS, IBM MQ messaging, RHEL Linux infrastructure
 - Onboarded 500+ trading partners across retail, grocery, automotive, pharmaceutical verticals
-- Built AuthPortal: internal employee authentication and system monitoring platform (ASP.NET Core, MSAL, Azure AD, PostgreSQL)
+- Built UIP (Unified Integration Portal): internal operations, integration, and system monitoring platform (ASP.NET Core, MSAL, Azure AD, PostgreSQL)
 - Engineered automated operational workflows reducing manual triage touchpoints by 70%
 
 PREVIOUS EXPERIENCE:
@@ -30,10 +30,10 @@ KEY TECHNICAL SKILLS:
 - AI/ML: LLMs, RAG pipelines, Gemini API, Python AI tooling, local model deployment
 - Dev: React, TypeScript, Node.js, FastAPI, Python, SQL
 
-AI PROJECTS:
+AI & PLATFORM PROJECTS:
 - YouTube AI Automation: @ammiexplains has 1,670+ subscribers, 624K+ total views. Solo-built pipeline.
 - Local AI Cluster: Deployed local LLM inference cluster
-- AuthPortal: Enterprise IAM system built solo
+- UIP (Unified Integration Portal): Enterprise operations and integration platform built solo
 
 AVAILABILITY: Open to Senior IT Manager, Enterprise Architect, AI Solutions Lead, VP of IT roles.
 `;

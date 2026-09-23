@@ -20,12 +20,12 @@ This project was built with a deep focus on **"Awwwards"-level aesthetics**, fea
 
 ## ✨ Key Features & Interactions
 
-- **Interactive Architecture & Incident Simulator:** Visual enterprise topology map covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and AuthPortal with live incident injection buttons (simulate MQ TLS certificate expiration recovery, 856 ASN mismatch reconciliation, and Black Friday volume surges).
+- **Interactive Architecture & Incident Simulator:** Visual enterprise topology map covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and UIP (Unified Integration Portal) with live incident injection buttons (simulate MQ TLS certificate expiration recovery, 856 ASN mismatch reconciliation, and Black Friday volume surges).
 - **Enterprise ROI & Automation Calculator:** Real-time interactive slider quantifying engineering hours saved (70% triage cut) and dollar value delivered ($400K+ annual savings) with one-click Google Calendar strategy booking.
 - **45-Second Executive Audio Intro:** Luxury audio player in the hero section featuring dynamic frequency waveform bars and crystal-clear voice introduction with accessible transcript drawer.
 - **Deep-Dive Case Study Postmortem Modals:** Clickable technical dossiers on all 4 core projects detailing engineering challenges, production solutions, full-stack architectures, and hard SLA metrics.
 - **60-Second Executive Recruiter Dossier Modal:** Instant candidate cheat-sheet with target roles, team scale, verified 99.99% uptime track record, and one-click action buttons (PDF resume, Google Meet 30-min, LinkedIn, direct email).
-- **Live Enterprise Command Center:** Bloomberg-terminal style status bar with real-time dual clocks (CT & UTC), monitoring 5 mission-critical systems (IBM Sterling, IBM MQ, Manhattan WMS, AuthPortal, YouTube AI) with expandable technical architecture specifications.
+- **Live Enterprise Command Center:** Bloomberg-terminal style status bar with real-time dual clocks (CT & UTC), monitoring 5 mission-critical systems (IBM Sterling, IBM MQ, Manhattan WMS, UIP — Unified Integration Portal, YouTube AI) with expandable technical architecture specifications.
 - **360° Real Photo Turntable Engine:** Pinned GSAP ScrollTrigger canvas that smoothly rotates through 32 high-resolution photographic turnaround frames of Ammi.
 - **AI Chatbot Clone:** Intelligent docked floating assistant with fast-path FAQ and Vercel serverless Gemini AI proxy (`api/chat.ts`) keeping secrets completely server-side.
 - **Google Calendar Direct Booking:** Instant 30-minute conversation scheduling via Google Calendar appointment system (`https://calendar.app.google/FkHk6NzDGzwhXEBn8`).

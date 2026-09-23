@@ -22,7 +22,7 @@ export const About: React.FC = () => {
     {
       icon: <Database className="w-5 h-5 text-[#e2c392]" />,
       title: 'Solo Full-Stack Engineering',
-      desc: 'Architected AuthPortal from scratch in ASP.NET Core, C#, and PostgreSQL with 5+ continuous background polling microservices.',
+      desc: 'Architected UIP (Unified Integration Portal) from scratch in ASP.NET Core, C#, and PostgreSQL with 5+ continuous background polling microservices.',
     },
   ];
 
@@ -47,7 +47,7 @@ export const About: React.FC = () => {
             </p>
 
             <p className="text-sm md:text-base text-[#9496a8] font-light leading-relaxed">
-              Outside of enterprise operations, I architect and build complete software platforms end-to-end — including <strong className="text-[#e2c392] font-medium">AuthPortal</strong> (an internal ops automation platform built solo in ASP.NET Core, C#, and PostgreSQL) and a self-hosted, multi-channel AI content generation pipeline operating across 10 YouTube channels.
+              Outside of enterprise operations, I architect and build complete software platforms end-to-end — including <strong className="text-[#e2c392] font-medium">UIP — Unified Integration Portal</strong> (an internal ops automation platform built solo in ASP.NET Core, C#, and PostgreSQL) and a self-hosted, multi-channel AI content generation pipeline operating across 10 YouTube channels.
             </p>
 
             {/* Key Live Metrics */}

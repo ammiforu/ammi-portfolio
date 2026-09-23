@@ -150,7 +150,7 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
                 GEODIS IT LEADERSHIP
               </div>
               <div className="text-xs text-[var(--text-secondary)]">
-                Franklin, TN • IBM Sterling • WMS • IBM MQ • AuthPortal
+                Franklin, TN • IBM Sterling • WMS • IBM MQ • UIP (Unified Integration Portal)
               </div>
             </div>
 

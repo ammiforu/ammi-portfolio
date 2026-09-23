@@ -19,11 +19,11 @@ export interface ProjectDossierData {
 export const PROJECT_DOSSIERS: Record<string, ProjectDossierData> = {
   'auth-portal': {
     id: 'auth-portal',
-    title: 'AuthPortal — Enterprise Operations Platform',
+    title: 'UIP — Unified Integration Portal',
     category: 'ENTERPRISE FULL-STACK & BACKGROUND WORKERS',
     subtitle: 'Solo-engineered enterprise operations management platform from the ground up at GEODIS.',
     challenge: 'Operations teams relied on fragile spreadsheets for on-call rotation schedules, and invoice reconciliation between GEODIS and logistics vendor bills was completely manual, leading to multi-day resolution backlogs.',
-    solution: 'Engineered AuthPortal as a full-stack platform using ASP.NET Core, PostgreSQL, and Azure AD / MSAL authentication. Built 5+ autonomous background hosted services (`IHostedService`) that continuously poll Oracle databases, reconcile invoices, and generate automated PDF/Excel executive reports.',
+    solution: 'Engineered UIP (Unified Integration Portal) as a full-stack platform using ASP.NET Core, PostgreSQL, and Azure AD / MSAL authentication. Built 5+ autonomous background hosted services (`IHostedService`) that continuously poll Oracle databases, reconcile invoices, and generate automated PDF/Excel executive reports.',
     architecture: [
       'Frontend: React 18 + TypeScript + Tailwind CSS with MSAL single sign-on',
       'Backend: ASP.NET Core 8 Web API with Dependency Injection & Repository Pattern',

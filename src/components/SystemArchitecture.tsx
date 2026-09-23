@@ -63,10 +63,10 @@ const NODES: TopologyNode[] = [
     highlightColor: 'from-cyan-500/20 to-cyan-500/5',
   },
   {
-    id: 'authportal',
-    label: 'AuthPortal & Ops AI',
+    id: 'uip-portal',
+    label: 'UIP & Ops Telemetry',
     category: 'Telemetry & Control',
-    role: 'Custom Internal Platform & Telemetry',
+    role: 'UIP (Unified Integration Portal) & Telemetry',
     specs: ['ASP.NET Core background worker services', 'Automated Oracle database transaction polling', 'Live Grafana telemetry & incident triage routing'],
     protocol: 'ASP.NET Core / Postgres / PromQL',
     status: 'nominal',
