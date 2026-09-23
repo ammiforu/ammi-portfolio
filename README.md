@@ -59,6 +59,7 @@ The site will be available at `http://localhost:5173`.
 - **Animations:** GSAP, ScrollTrigger, Framer Motion, Lenis Smooth Scroll, React-TSParticles
 - **Data Visualization:** Recharts
 - **Icons:** Lucide React
+- **Analytics:** `@vercel/analytics` (Real-time privacy-friendly traffic telemetry)
 - **Serverless Backend:** Vercel Functions (`api/chat.ts`) for secure Gemini AI queries
 
 ## 👨‍💻 About Ammi Reddy Tetala

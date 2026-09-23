@@ -23,6 +23,7 @@ import { ExecutiveBriefModal } from './components/ExecutiveBriefModal';
 import { CommandCenterStatus } from './components/CommandCenterStatus';
 import { SystemArchitecture } from './components/SystemArchitecture';
 import { EnterpriseCalculator } from './components/EnterpriseCalculator';
+import { Analytics } from '@vercel/analytics/react';
 
 export const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -91,6 +92,9 @@ export const App: React.FC = () => {
 
         {/* Floating AI Chat Widget */}
         <AIChat />
+
+        {/* Vercel Web Analytics (Silent & Non-distracting) */}
+        <Analytics />
       </div>
     </RecruiterProvider>
   );

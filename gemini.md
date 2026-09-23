@@ -15,6 +15,7 @@
 ## Key Stack & Architecture
 - **Vite + React 19 + TypeScript + Tailwind CSS v4**
 - **GSAP + ScrollTrigger + Lenis Smooth Scroll**
+- **Vercel Web Analytics**: `@vercel/analytics/react` for silent real-time visitor telemetry
 - **360° Hero Turntable Engine**: 32 high-resolution WebP frames extracted and rendered from Ammi's real photographic turnaround reference sheet
 - **Serverless AI Proxy**: `api/chat.ts` (Vercel Serverless Function) keeping `GEMINI_API_KEY` secure server-side
 - **Components**:

@@ -29,6 +29,8 @@ Luxury editorial portfolio and interactive technical showcase for Ammi Reddy Tet
 +-----------------------------------------------------------------------------+
 |  AIChat (Docked Floating AI Clone + Serverless Proxy api/chat.ts)           |
 +-----------------------------------------------------------------------------+
+|  Vercel Web Analytics (@vercel/analytics/react - Silent Background Telemetry) |
++-----------------------------------------------------------------------------+
 ```
 
 ## Turntable Engine Architecture
