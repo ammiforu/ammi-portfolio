@@ -108,7 +108,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-xs font-mono text-[#9496a8]">LOCATION & AVAILABILITY</div>
-                  <div className="text-sm font-bold font-syne text-white">Spring Hill, TN (Open to Remote)</div>
+                  <div className="text-sm font-bold font-syne text-white">Franklin, TN (Nashville Metro • Open to Remote)</div>
                 </div>
               </div>
 

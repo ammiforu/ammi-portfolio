@@ -63,10 +63,11 @@ The site will be available at `http://localhost:5173`.
 
 ## 👨‍💻 About Ammi Reddy Tetala
 
-I am an **Enterprise IT Manager** (GEODIS) and **Solutions Developer** with over 13 years of experience (working professionally since 2013) bridging legacy infrastructure with modern intelligent automation. I architect secure, scalable integrations and build AI-powered applications that drive business value.
+I am an **Enterprise IT Manager** (GEODIS) and **Enterprise Systems & AI Architect** based in **Franklin, TN (Greater Nashville Metro)** with over 13 years of enterprise IT infrastructure experience (working professionally since 2013), including 7+ years leading mission-critical logistics technology at GEODIS. I architect high-throughput integrations, maintain 99.99% system availability across tier-1 supply chain ecosystems, and engineer intelligent automation solutions.
 
+- **Location:** Franklin, TN (Greater Nashville Metro • Open to Remote)
 - **LinkedIn:** [linkedin.com/in/ammireddytetala](https://www.linkedin.com/in/ammireddytetala/)
 - **YouTube:** [@ammiexplains](https://www.youtube.com/@ammiexplains)
 - **GitHub:** [github.com/ammiforu](https://github.com/ammiforu)
-- **Focus Areas:** Enterprise Architecture, Generative AI (LLMs, RAG), Cloud Infrastructure (GCP, Azure, AWS), and Data Engineering.
-- **Notable Projects:** AuthPortal (Enterprise IAM), YouTube AI Agent (Content Automation), EDI & IBM MQ Infrastructure Integrations.
+- **Focus Areas:** Enterprise Architecture, EDI/B2B Integration, Cloud Infrastructure (GCP, Azure, AWS), and AI-Powered Automation.
+- **Enterprise Confidentiality:** All architecture metrics and customer references are anonymized in compliance with enterprise NDAs.

@@ -23,7 +23,7 @@ const NODES: TopologyNode[] = [
     label: '500+ Trading Partners',
     category: 'Ingestion Layer',
     role: 'Tier-1 Retailers, Suppliers & 3PL Shippers',
-    specs: ['Walmart, Target, Home Depot, Wayfair', 'Inbound 850 (PO), Outbound 856 (ASN), 810 (Invoice)', 'VAN, AS2, SFTP, FTPS pipelines'],
+    specs: ['Fortune 500 Retailers & Global Consumer Brands (Big-Box, Grocery, Auto)', 'Inbound 850 (PO), Outbound 856 (ASN), 810 (Invoice)', 'VAN, AS2, SFTP, FTPS pipelines'],
     protocol: 'EDI X12 / EDIFACT / AS2',
     status: 'nominal',
     sla: '99.98% Ingestion',
@@ -303,7 +303,7 @@ export const SystemArchitecture: React.FC = () => {
               <div className="flex items-center gap-2 text-[#9496a8]">
                 <Shield className="w-4 h-4 text-emerald-400" />
                 <span>
-                  <strong className="text-white">Ammi's Engineering Rule:</strong> Redundant failover paths, lock-file concurrency protection, and automated Grafana telemetry alert triggers prevent cascading microservice outages.
+                  <strong className="text-white">Resilience Architecture:</strong> Redundant failover paths, lock-file concurrency protection, and automated Grafana telemetry alert triggers prevent cascading microservice outages.
                 </span>
               </div>
               <div className="text-emerald-400 font-bold shrink-0">
@@ -312,6 +312,16 @@ export const SystemArchitecture: React.FC = () => {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {/* Enterprise Confidentiality & Compliance Notice */}
+        <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-between gap-4 text-[11px] font-mono text-[#9496a8]">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#e2c392]" />
+            <span>
+              <strong>Enterprise Confidentiality & Compliance Notice:</strong> All topologies, workflows, and case studies are presented at a high-level and anonymized to comply with non-disclosure agreements, customer privacy, and enterprise security policies.
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );

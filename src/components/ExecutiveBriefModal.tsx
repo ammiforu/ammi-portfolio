@@ -98,7 +98,7 @@ export const ExecutiveBriefModal: React.FC<ExecutiveBriefModalProps> = ({
                 <div className="text-[10px] text-[#9496a8] uppercase flex items-center gap-1">
                   <MapPin className="w-3 h-3 text-[#e2c392]" /> Location
                 </div>
-                <div className="text-white font-semibold">Spring Hill, TN</div>
+                <div className="text-white font-semibold">Franklin, TN (Nashville Metro)</div>
               </div>
 
               <div className="p-3 rounded-2xl bg-[#12131d] border border-white/5 space-y-1">

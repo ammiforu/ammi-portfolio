@@ -74,7 +74,7 @@ async def trigger_render(payload: VideoSpec):
     title: 'Enterprise EDI & Supply Chain Architecture',
     category: 'MISSION-CRITICAL B2B INTEGRATION & PROTOCOLS',
     subtitle: 'High-throughput supply chain transaction network onboarding 500+ enterprise trading partners.',
-    challenge: 'Critical retail partners (Walmart, Target, Home Depot) experienced ASN/856 confirmation mismatches between physical carton dispatch and WMS record layers, creating compliance chargeback risks.',
+    challenge: 'Tier-1 retail accounts and national distribution partners experienced ASN/856 confirmation mismatches between physical carton dispatch and WMS record layers, creating compliance chargeback risks.',
     solution: 'Designed and deployed optimized X12/EDIFACT translation maps on IBM Sterling B2B Integrator. Established secure AS2, SFTP, and VAN transport pipelines, and implemented automated carton-level verification prior to 856 transmission.',
     architecture: [
       'Platform: IBM Sterling B2B Integrator (SI 6.x) with custom BPML business processes',
@@ -246,7 +246,7 @@ export const ProjectDossierModal: React.FC<ProjectDossierModalProps> = ({ projec
               </a>
             ) : (
               <div className="text-xs font-mono text-[#9496a8]">
-                Enterprise verified architecture • GEODIS supply chain production
+                Enterprise verified architecture • High-level sanitized technical summary to comply with NDAs
               </div>
             )}
 

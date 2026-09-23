@@ -11,7 +11,6 @@ import { Projects } from './components/Projects';
 import { Journey } from './components/Journey';
 import { SkillsGrid } from './components/SkillsGrid';
 import { Services } from './components/Services';
-import { WhyMe } from './components/WhyMe';
 import { Achievements } from './components/Achievements';
 import { MediaChannels } from './components/MediaChannels';
 import { Testimonials } from './components/Testimonials';
@@ -79,7 +78,6 @@ export const App: React.FC = () => {
           <Journey />
           <SkillsGrid />
           <Services />
-          <WhyMe />
           <EnterpriseCalculator />
           <Achievements />
           <MediaChannels />

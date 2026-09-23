@@ -43,7 +43,7 @@ export const About: React.FC = () => {
             </h2>
 
             <p className="text-base md:text-lg text-[#9496a8] font-light leading-relaxed">
-              I am an IT Manager at <strong className="text-white font-medium">GEODIS</strong> with over 7+ years of deep expertise in supply chain and logistics technology. Currently based in Spring Hill, TN, I lead a 14-person global engineering team across the U.S. and India orchestrating mission-critical EDI operations, WMS systems, RHEL Linux environments, and IBM MQ infrastructure.
+              I am an Enterprise IT Manager at <strong className="text-white font-medium">GEODIS</strong> with over 13+ years in enterprise IT infrastructure & systems architecture, including 7+ years leading logistics technology. Based in Franklin, TN (Greater Nashville Metro), I lead a 14-person global engineering team across the U.S. and India orchestrating mission-critical EDI operations, Manhattan WMS systems, RHEL Linux environments, and IBM MQ infrastructure.
             </p>
 
             <p className="text-sm md:text-base text-[#9496a8] font-light leading-relaxed">

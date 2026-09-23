@@ -2,8 +2,9 @@
 
 ## Identity & Role
 - **Subject**: Ammi Reddy Tetala
-- **Title**: IT Manager | Supply Chain & Logistics Technology | AI-Driven Automation Leader
-- **Location**: Spring Hill, TN (Open to Remote)
+- **Title**: IT Manager | Supply Chain & Logistics Technology | Enterprise Systems & AI Architect
+- **Experience**: 13+ years in enterprise IT infrastructure & systems architecture, including 7+ years leading logistics technology at GEODIS
+- **Location**: Franklin, TN (Greater Nashville Metro • Open to Remote)
 - **Email**: ammitetala@gmail.com | Phone: +1 (925) 663-5429
 - **LinkedIn**: https://www.linkedin.com/in/ammireddytetala/
 - **GitHub**: https://github.com/ammiforu

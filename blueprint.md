@@ -21,7 +21,7 @@ Luxury editorial portfolio and interactive technical showcase for Ammi Reddy Tet
 +-----------------------------------------------------------------------------+
 |  Professional Journey (Timeline) | Technical Mastery (Radar + Tilt Cards)   |
 +-----------------------------------------------------------------------------+
-|  Services | WhyMe | EnterpriseCalculator (Real-Time ROI & Value Estimator)  |
+|  Services (Enterprise Offerings) | EnterpriseCalculator (Real-Time ROI Tool) |
 +-----------------------------------------------------------------------------+
 |  Achievements & Education | MediaChannels & Live Telemetry Chart | Contact  |
 +-----------------------------------------------------------------------------+
