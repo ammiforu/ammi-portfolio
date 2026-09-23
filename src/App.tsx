@@ -22,6 +22,8 @@ import { AIChat } from './components/AIChat';
 import { RecruiterProvider, RecruiterToggle } from './components/RecruiterToggle';
 import { ExecutiveBriefModal } from './components/ExecutiveBriefModal';
 import { CommandCenterStatus } from './components/CommandCenterStatus';
+import { SystemArchitecture } from './components/SystemArchitecture';
+import { EnterpriseCalculator } from './components/EnterpriseCalculator';
 
 export const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -73,10 +75,12 @@ export const App: React.FC = () => {
           <About />
           <Marquee />
           <Projects />
+          <SystemArchitecture />
           <Journey />
           <SkillsGrid />
           <Services />
           <WhyMe />
+          <EnterpriseCalculator />
           <Achievements />
           <MediaChannels />
           <Testimonials />

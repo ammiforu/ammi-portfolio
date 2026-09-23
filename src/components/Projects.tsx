@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Database, Video, Server, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Database, Video, Server, ShieldCheck, Layers } from 'lucide-react';
+import { ProjectDossierModal } from './ProjectDossierModal';
 
 export const Projects: React.FC = () => {
+  const [activeDossierId, setActiveDossierId] = useState<string | null>(null);
   const projects = [
     {
       id: 'auth-portal',
@@ -129,19 +131,29 @@ export const Projects: React.FC = () => {
                     ))}
                   </div>
 
-                  {project.link && (
-                    <div className="pt-2">
+                  {/* Architecture & Postmortem Deep-Dive Button */}
+                  <div className="flex flex-wrap items-center gap-3 pt-2">
+                    <button
+                      onClick={() => setActiveDossierId(project.id)}
+                      className="px-4 py-2 rounded-xl bg-white/5 border border-white/15 text-xs font-mono text-white hover:text-[#e2c392] hover:border-[#e2c392]/50 hover:bg-[#e2c392]/10 transition-all duration-300 flex items-center gap-2 group/btn shadow-md"
+                    >
+                      <Layers className="w-3.5 h-3.5 text-[var(--accent-cyan)] group-hover/btn:text-[#e2c392] transition-colors" />
+                      <span>Explore Architecture & Postmortem</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover/btn:opacity-100 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                    </button>
+
+                    {project.link && (
                       <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs font-mono text-[#e2c392] hover:underline uppercase tracking-wider"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono text-[#e2c392] hover:underline uppercase tracking-wider px-3 py-2"
                       >
                         <span>Visit @ammiexplains Channel</span>
-                        <ArrowUpRight className="w-4 h-4" />
+                        <ArrowUpRight className="w-3.5 h-3.5" />
                       </a>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
 
                 {/* Right Visual Box */}
@@ -177,6 +189,12 @@ export const Projects: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* Case Study Deep-Dive Dossier Modal */}
+      <ProjectDossierModal
+        projectId={activeDossierId}
+        onClose={() => setActiveDossierId(null)}
+      />
     </section>
   );
 };

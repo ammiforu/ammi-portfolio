@@ -255,8 +255,8 @@ export const YouTubeAnalyticsChart: React.FC = () => {
       {/* Footer Info & Verification */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-3 border-t border-white/5 text-[11px] font-mono text-[#9496a8]/70 relative z-10">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-400" />
-          <span>Source: G:\My Drive\Ammi Explains\Analytics\ammi_explain_daily.json</span>
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Data Source: YouTube Cloud Analytics API & Automated Pipeline</span>
         </div>
         {updatedAt && (
           <div>

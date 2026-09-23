@@ -15,17 +15,19 @@ Luxury editorial portfolio and interactive technical showcase for Ammi Reddy Tet
 +-----------------------------------------------------------------------------+
 |  CommandCenterStatus (Real-Time 5-Cluster Bloomberg Terminal & Dual Clocks)  |
 +-----------------------------------------------------------------------------+
-|  About | Marquee | Projects (AuthPortal, YouTube AI, EDI, IBM MQ)           |
+|  About | Marquee | Projects (Illuminated Cards + Deep-Dive Postmortem Modals)|
++-----------------------------------------------------------------------------+
+|  SystemArchitecture (Interactive Topology Graph & Incident Simulator)       |
 +-----------------------------------------------------------------------------+
 |  Professional Journey (Timeline) | Technical Mastery (Radar + Tilt Cards)   |
 +-----------------------------------------------------------------------------+
-|  Services | WhyMe | Achievements & Education | Track Record & References    |
+|  Services | WhyMe | EnterpriseCalculator (Real-Time ROI & Value Estimator)  |
 +-----------------------------------------------------------------------------+
-|  MediaChannels & Live YouTube Telemetry Chart | Contact & Google Calendar   |
+|  Achievements & Education | MediaChannels & Live Telemetry Chart | Contact  |
 +-----------------------------------------------------------------------------+
-|  ExecutiveBriefModal (60s Candidate Dossier Overlay)                        |
+|  ExecutiveBriefModal (60s Dossier) | ExecutiveAudioPlayer (45s Audio Intro) |
 +-----------------------------------------------------------------------------+
-|  AIChat (Highlighted Floating AI Clone + Serverless Proxy api/chat.ts)      |
+|  AIChat (Docked Floating AI Clone + Serverless Proxy api/chat.ts)           |
 +-----------------------------------------------------------------------------+
 ```
 

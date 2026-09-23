@@ -17,21 +17,25 @@
 - **360° Hero Turntable Engine**: 32 high-resolution WebP frames extracted and rendered from Ammi's real photographic turnaround reference sheet
 - **Serverless AI Proxy**: `api/chat.ts` (Vercel Serverless Function) keeping `GEMINI_API_KEY` secure server-side
 - **Components**:
-  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece with Ammi's real photographic frames, LiveTicker & 60s Brief trigger
+  - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece, streamlined CTAs, Executive Audio Player, LiveTicker & 60s Brief trigger
+  - `ExecutiveAudioPlayer.tsx`: 45-Second Executive Audio Brief with real-time dynamic frequency waveform bars and accessible transcript drawer
   - `CommandCenterStatus.tsx`: Real-time Bloomberg-style infrastructure health bar with dual clocks (CT & UTC), 5 enterprise clusters (IBM Sterling, IBM MQ, Manhattan WMS, AuthPortal, YouTube AI) and expandable architecture drawers
   - `ExecutiveBriefModal.tsx`: 60-Second Executive Recruiter Dossier modal with verified career summary, vital stats, target roles, and one-click action center (PDF resume, Google Meet 30-min, LinkedIn, direct email)
-  - `AIChat.tsx`: Floating AI Assistant with highlighted animated pointer arrow, FAQ knowledge base & secure Gemini API proxy
+  - `AIChat.tsx`: Non-overlapping docked floating AI assistant with fast-path FAQ knowledge base & secure Gemini API proxy
   - `Navbar.tsx`: Glass sticky header, Recruiter Mode Toggle, 60s Brief button, & mobile fullscreen overlay menu
   - `About.tsx`: GEODIS 14-person global team (US & India), 7+ years supply chain tech, real photo badge
   - `Marquee.tsx`: Refined horizontal competency ticker
-  - `Projects.tsx`: High-visibility illuminated showcases with full-color clarity and custom focal framing: AuthPortal (ASP.NET Core/C#/PostgreSQL), YouTube AI Content Automation (FastAPI/10 channels), Enterprise EDI (IBM Sterling/856 ASN), IBM MQ TLS Zero-Downtime Fix
+  - `Projects.tsx`: High-visibility illuminated showcases with full-color clarity, custom focal framing, and deep-dive case study dossier triggers
+  - `ProjectDossierModal.tsx`: Comprehensive case study postmortem drawers for all 4 core projects (challenge, solution, architecture, metrics, and production code blocks)
+  - `SystemArchitecture.tsx`: Interactive Enterprise Topology & Incident Simulator covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and AuthPortal with live incident injection
+  - `EnterpriseCalculator.tsx`: Real-time interactive slider quantifying engineering hours saved (70% triage cut) and dollar value delivered with Google Calendar strategy booking
   - `Skills.tsx`: Verified competencies: EDI (X12/EDIFACT), IBM MQ, Python, Bash, ASP.NET Core, Hadoop, Linux, Grafana
   - `Services.tsx`: Client-focused enterprise architecture & automation offerings
   - `Journey.tsx`: Accurate chronological timeline matching resume (GEODIS IT Manager, Technical Lead, EDI Analyst, and AT&T Hadoop Engineer)
   - `Achievements.tsx`: Milestones (MQ TLS recovery, BizManager upgrades, Grafana rollout, Hadoop at AT&T) & Degrees (MS Information Systems Security, MS CS, BS CS)
   - `Testimonials.tsx`: Honest track record & enterprise references on request + verified LinkedIn connect CTA
   - `MediaChannels.tsx`: YouTube Flagship channel @ammiexplains, @ViswaDarshiniUsa, and embedded live telemetry
-  - `YouTubeAnalyticsChart.tsx`: Interactive Recharts telemetry chart synced from Google Drive JSON (43 daily snapshots tracking views, subscribers, velocity, watch hours)
+  - `YouTubeAnalyticsChart.tsx`: Interactive Recharts telemetry chart synced from cloud pipeline (43 daily snapshots tracking views, subscribers, velocity, watch hours)
   - `Contact.tsx`: Direct email, phone, canonical LinkedIn, GitHub, YouTube, inquiry form, and instant Google Calendar Appointment Scheduling
   - `CustomCursor.tsx`: Smooth follower with VIEW/EXPLORE expansion
 
@@ -40,4 +44,4 @@
 
 ## Verification Status
 - Production Build: `npm run build` PASS (0 errors, 0 warnings).
-- Browser Subagent Live Verification: PASS (Verified project images brightness, full-color rendering, and accurate facial/monitor framing).
+- Browser Subagent Live Verification: PASS (Verified 45s audio brief waveform, interactive architecture incident simulator, ROI calculator slider math, project dossier modal, and docked floating AI widget).

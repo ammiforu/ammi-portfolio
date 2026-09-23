@@ -6,6 +6,7 @@ import { Magnetic } from './Magnetic';
 import { AnimatedCounter } from './AnimatedCounter';
 import { LiveTicker } from './LiveTicker';
 import { useRecruiterMode } from './RecruiterToggle';
+import { ExecutiveAudioPlayer } from './ExecutiveAudioPlayer';
 
 interface HeroProps {
   onConnectClick: () => void;
@@ -129,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
               ))}
             </h1>
             <p className="text-xs md:text-sm text-[var(--text-secondary)] font-light leading-relaxed">
-              IT Manager at GEODIS leading a 14-person global team across the U.S. and India. Specializing in EDI, WMS systems, IBM MQ, and solo-engineered automation platforms.
+              IT Manager at GEODIS leading a 14-person global team across the U.S. and India. 13+ years in enterprise IT infrastructure & architecture, including 7+ years leading logistics technology, EDI, WMS, and IBM MQ systems.
             </p>
           </motion.div>
 
@@ -141,7 +142,7 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 1 }}
-            className="md:col-span-4 flex flex-col items-start md:items-end space-y-6 pointer-events-auto md:text-right bg-gradient-to-l from-[var(--bg-dark)]/90 via-[var(--bg-dark)]/60 to-transparent p-4 md:p-6 rounded-2xl backdrop-blur-sm border-r border-[var(--border-subtle)]"
+            className="md:col-span-4 flex flex-col items-start md:items-end space-y-5 pointer-events-auto md:text-right bg-gradient-to-l from-[var(--bg-dark)]/90 via-[var(--bg-dark)]/60 to-transparent p-4 md:p-6 rounded-2xl backdrop-blur-sm border-r border-[var(--border-subtle)]"
           >
             <div className="space-y-1">
               <div className="text-xs font-mono text-[var(--accent-cyan)] tracking-wider uppercase flex items-center md:justify-end gap-1">
@@ -154,7 +155,7 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
             </div>
 
             {/* Stat Cards Mini */}
-            <div className="flex gap-3 mb-4 flex-wrap">
+            <div className="flex gap-3 flex-wrap">
               <div className="blue-glass p-3 rounded-lg border border-[var(--border-subtle)] text-center min-w-[60px]">
                 <div className="text-xl font-syne font-bold text-[var(--text-primary)]">
                   <AnimatedCounter target={13} suffix="+" />
@@ -177,48 +178,46 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
               )}
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap items-center justify-end gap-3 sm:gap-4">
+            {/* 45-Second Executive Audio Intro */}
+            <div className="pt-1">
+              <ExecutiveAudioPlayer />
+            </div>
+
+            {/* Streamlined CTAs */}
+            <div className="flex flex-wrap items-center justify-end gap-2.5 pt-1">
+              <Magnetic strength={0.3}>
+                <button
+                  onClick={onConnectClick}
+                  data-cursor="CONNECT"
+                  className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-cyan)] text-[#050811] text-xs font-bold tracking-wider uppercase hover:shadow-[0_0_20px_var(--accent-cyan)] transition-all duration-300"
+                >
+                  Let's Connect
+                </button>
+              </Magnetic>
+
               {onOpenBrief && (
                 <Magnetic strength={0.3}>
                   <button
                     onClick={onOpenBrief}
                     data-cursor="BRIEF"
-                    className="px-5 py-3 rounded-full bg-[#e2c392]/10 border border-[#e2c392]/50 text-[#e2c392] text-xs font-bold tracking-wider uppercase hover:bg-[#e2c392] hover:text-[#08080a] transition-all duration-300 shadow-[0_0_20px_rgba(226,195,146,0.2)] flex items-center gap-1.5"
+                    className="px-4 py-2.5 rounded-full bg-[#e2c392]/10 border border-[#e2c392]/50 text-[#e2c392] text-xs font-bold tracking-wider uppercase hover:bg-[#e2c392] hover:text-[#08080a] transition-all duration-300 flex items-center gap-1.5"
                   >
-                    <Sparkles className="w-3.5 h-3.5" />
+                    <Sparkles className="w-3 h-3" />
                     <span>60s Brief</span>
                   </button>
                 </Magnetic>
               )}
-              <Magnetic strength={0.3}>
-                <button
-                  onClick={onWorkClick}
-                  data-cursor="VIEW WORK"
-                  className="px-6 py-3 rounded-full bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-cyan)] text-[#050811] text-xs font-bold tracking-wider uppercase hover:shadow-[0_0_20px_var(--accent-cyan)] transition-all duration-300"
-                >
-                  View My Work
-                </button>
-              </Magnetic>
+
               <Magnetic strength={0.3}>
                 <a
                   href="/assets/Ammi_Reddy_Tetala_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="DOWNLOAD"
-                  className="inline-block px-6 py-3 rounded-full bg-transparent border border-[var(--border-subtle)] text-[var(--accent-cyan)] text-xs font-semibold tracking-wider uppercase hover:border-[var(--accent-cyan)] hover:bg-[var(--accent-cyan)]/5 transition-all duration-300 cyan-glow"
+                  className="inline-block px-4 py-2.5 rounded-full bg-white/5 border border-white/15 text-white/90 text-xs font-mono tracking-wider uppercase hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] transition-all duration-300"
                 >
                   Resume
                 </a>
-              </Magnetic>
-              <Magnetic strength={0.3}>
-                <button
-                  onClick={onConnectClick}
-                  data-cursor="CONNECT"
-                  className="px-6 py-3 rounded-full bg-transparent border border-[var(--border-subtle)] text-[var(--text-primary)] text-xs font-semibold tracking-wider uppercase hover:border-[var(--text-primary)] transition-all duration-300"
-                >
-                  Let's Connect
-                </button>
               </Magnetic>
             </div>
           </motion.div>
@@ -229,10 +228,11 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="flex flex-col items-center justify-center space-y-2 pointer-events-auto"
+          onClick={onWorkClick}
+          className="flex flex-col items-center justify-center space-y-2 pointer-events-auto cursor-pointer group"
         >
-          <span className="text-[10px] font-mono tracking-widest text-[var(--text-secondary)] uppercase">
-            SCROLL TO EXPLORE
+          <span className="text-[10px] font-mono tracking-widest text-[var(--text-secondary)] uppercase group-hover:text-[var(--accent-cyan)] transition-colors">
+            SCROLL TO EXPLORE WORK
           </span>
           <div className="w-6 h-10 border border-[var(--border-subtle)] rounded-full flex items-center justify-center p-1">
             <div className="w-1 h-2 bg-[var(--accent-cyan)] rounded-full animate-bounce shadow-[0_0_8px_var(--accent-cyan)]" />
