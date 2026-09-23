@@ -157,7 +157,7 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
             <div className="flex gap-3 mb-4 flex-wrap">
               <div className="blue-glass p-3 rounded-lg border border-[var(--border-subtle)] text-center min-w-[60px]">
                 <div className="text-xl font-syne font-bold text-[var(--text-primary)]">
-                  <AnimatedCounter target={20} suffix="+" />
+                  <AnimatedCounter target={13} suffix="+" />
                 </div>
                 <div className="text-[10px] font-mono text-[var(--text-secondary)] uppercase tracking-wider">Yrs Exp</div>
               </div>

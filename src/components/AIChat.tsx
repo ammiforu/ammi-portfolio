@@ -6,7 +6,7 @@ import { MessageCircle, X, Send, Bot, User, Sparkles, Loader2 } from 'lucide-rea
 
 
 const FAQ: Record<string, string> = {
-  experience: "Ammi has **20+ years** of enterprise IT experience, currently leading a 14-person global engineering team at GEODIS (one of the world's largest 3PL companies). He manages IBM Sterling B2B, WMS, and IBM MQ infrastructure at scale.",
+  experience: "Ammi has **13+ years** of enterprise IT experience (working professionally since 2013, with 7+ years in supply chain tech at GEODIS). He currently leads a 14-person global engineering team managing IBM Sterling B2B, WMS, and IBM MQ infrastructure at scale.",
   skills: "**Enterprise:** IBM Sterling B2B Integrator, IBM MQ, WMS (Manhattan Associates), EDI (X12/EDIFACT/AS2)\n**AI/Dev:** React, Python, FastAPI, LLMs, RAG pipelines, Gemini API\n**Cloud:** GCP, Azure AD, AWS",
   projects: "**AuthPortal** — Enterprise IAM system built solo with MSAL + Azure AD + React\n**YouTube AI Engine** — End-to-end automated content pipeline (1,670+ subscribers, 624K+ views)\n**EDI Automation** — Reduced manual touchpoints by 70% across 500+ trading partners",
   availability: "Ammi is **open to opportunities** and can discuss timeline during conversations. He's based in Franklin, TN and open to remote roles globally.",
@@ -14,7 +14,7 @@ const FAQ: Record<string, string> = {
   salary: "Ammi is open to discussing compensation based on the role scope. Best to connect directly for confidential discussions.",
   location: "Based in **Franklin, TN** (Nashville metro). Open to **full remote** or hybrid. Can travel as needed.",
   team: "Currently leads a **14-person global engineering team** spanning US and India at GEODIS.",
-  education: "Ammi's expertise is built on 20+ years of hands-on enterprise engineering. Practical, certified proficiency across IBM, Microsoft, and cloud platforms.",
+  education: "Ammi's expertise is built on 13+ years of hands-on enterprise engineering since 2013 (BS in Computer Science 2013, MS in CS 2016, MS in Information Systems Security 2019).",
 };
 
 function matchFAQ(query: string): string | null {

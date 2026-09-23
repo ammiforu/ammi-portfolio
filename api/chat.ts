@@ -7,20 +7,22 @@ ABOUT AMMI:
 - Full name: Ammi Reddy Tetala
 - Current role: Enterprise IT Manager at GEODIS (global 3PL company)
 - Location: Franklin, TN (open to remote)
-- Experience: 20+ years in enterprise IT
+- Experience: 13+ years in enterprise IT (working professionally since 2013)
 - Contact: ammitetala@gmail.com | +1 (925) 663-5429
 
-CURRENT ROLE (GEODIS, 2019-Present):
-- Leads 14-person global engineering team across US and India
-- Manages IBM Sterling B2B Integrator (EDI/B2B), WMS (Manhattan Associates), IBM MQ messaging
+CURRENT ROLE (GEODIS, 2020-Present):
+- IT Manager (May 2025-Present): Leads 14-person global engineering team across US and India
+- Technical Lead (Nov 2021-May 2025): Go-to technical authority for EDI/WMS, author of AuthPortal
+- EDI Analyst (Jul 2020-Nov 2021): High-volume trading partner onboarding and transaction monitoring
+- Manages IBM Sterling B2B Integrator (EDI/B2B), Manhattan WMS, IBM MQ messaging, RHEL Linux infrastructure
 - Onboarded 500+ trading partners across retail, grocery, automotive, pharmaceutical verticals
-- Built AuthPortal: internal employee authentication system (MSAL, Azure AD, React)
-- Engineered EDI automation reducing manual touchpoints by 70%
+- Built AuthPortal: internal employee authentication and system monitoring platform (ASP.NET Core, MSAL, Azure AD, PostgreSQL)
+- Engineered automated operational workflows reducing manual triage touchpoints by 70%
 
 PREVIOUS EXPERIENCE:
-- Levi Strauss & Co — IT Specialist (2016-2019): EDI integrations, B2B onboarding
-- Cross Country Healthcare — Middleware Developer (2013-2016): IBM MQ, WebSphere
-- Earlier roles in IBM WebSphere, middleware (2004 onwards)
+- AT&T — Hadoop Engineer / Sr. Hadoop Administrator (2017-2020): Big data clusters (HDFS, Hive, Kafka, Spark) & GXS/BizManager EDI
+- Integration & Enterprise IT Developer (2013-2017): Middleware, systems integration, Java, B2B workflows
+- Education: Bachelor of Technology (B.Tech) in Computer Science & Engineering (2013)
 
 KEY TECHNICAL SKILLS:
 - Enterprise: IBM Sterling B2B Integrator, IBM MQ, WMS, EDI (X12, EDIFACT, AS2, SFTP)

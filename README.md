@@ -1,6 +1,6 @@
 # Ammi Reddy Tetala — Enterprise IT & AI Solutions Portfolio
 
-A high-end, interactive portfolio designed to showcase 20+ years of enterprise IT leadership, architecture, and AI-driven solutions development. 
+A high-end, interactive portfolio designed to showcase 13+ years of enterprise IT leadership, architecture, and AI-driven solutions development (working professionally since 2013). 
 
 This project was built with a deep focus on **"Awwwards"-level aesthetics**, featuring a dark cyber-enterprise theme, fluid animations, and data-driven visualization.
 
@@ -59,7 +59,7 @@ The site will be available at `http://localhost:5173`.
 
 ## 👨‍💻 About Ammi Reddy Tetala
 
-I am an **Enterprise IT Manager** (GEODIS) and **Solutions Developer** with over 20 years of experience bridging legacy infrastructure with modern intelligent automation. I architect secure, scalable integrations and build AI-powered applications that drive business value.
+I am an **Enterprise IT Manager** (GEODIS) and **Solutions Developer** with over 13 years of experience (working professionally since 2013) bridging legacy infrastructure with modern intelligent automation. I architect secure, scalable integrations and build AI-powered applications that drive business value.
 
 - **LinkedIn:** [linkedin.com/in/ammireddytetala](https://www.linkedin.com/in/ammireddytetala/)
 - **YouTube:** [@ammiexplains](https://www.youtube.com/@ammiexplains)
