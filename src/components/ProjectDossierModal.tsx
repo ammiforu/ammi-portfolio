@@ -57,8 +57,8 @@ builder.Services.AddHostedService<VendorInvoiceReconciliationWorker>();`,
       'Network Scope: 10 channels including @ammiexplains & @ViswaDarshiniUsa',
     ],
     metrics: [
-      { label: 'Total Views', value: '624K+', desc: 'Across automated channel network' },
-      { label: 'Subscribers', value: '1,670+', desc: 'On flagship channel @ammiexplains' },
+      { label: 'Total Views', value: '685K+', desc: 'Across automated channel network' },
+      { label: 'Subscribers', value: '1,720+', desc: 'On flagship channel @ammiexplains' },
       { label: 'Channels', value: '10', desc: 'Automated digital media network' },
     ],
     codeBlock: `# FastAPI Proxy endpoint handling autonomous video synthesis

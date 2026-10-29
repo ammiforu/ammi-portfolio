@@ -37,13 +37,18 @@
   - `Achievements.tsx`: Milestones (MQ TLS recovery, BizManager upgrades, Grafana rollout, Hadoop at AT&T) & Degrees (MS Information Systems Security, MS CS, BS CS)
   - `Testimonials.tsx`: Honest track record & enterprise references on request + verified LinkedIn connect CTA
   - `MediaChannels.tsx`: YouTube Flagship channel @ammiexplains, @ViswaDarshiniUsa, and embedded live telemetry
-  - `YouTubeAnalyticsChart.tsx`: Interactive Recharts telemetry chart synced from cloud pipeline (43 daily snapshots tracking views, subscribers, velocity, watch hours)
+  - `YouTubeAnalyticsChart.tsx`: Interactive Recharts telemetry chart synced from cloud pipeline (80 daily snapshots tracking 685K+ views, 1,720+ subscribers, velocity, watch hours)
   - `Contact.tsx`: Direct email, phone, canonical LinkedIn, GitHub, YouTube, inquiry form, and instant Google Calendar Appointment Scheduling
   - `CustomCursor.tsx`: Smooth follower with VIEW/EXPLORE expansion
 
 ## Automation & Sync Pipeline
-- `scripts/sync_youtube_analytics.py`: Syncs daily analytics and archive history from `G:\My Drive\Ammi Explains\Analytics\` into `public/analytics/`
+- `api/youtube-stats.ts`: Vercel Serverless Function caching live YouTube Data API statistics (with 30-min CDN edge caching) and local snapshot fallback
+- `scripts/sync_youtube_analytics.py`: Syncs daily analytics and archive history from `G:\My Drive\Ammi Explains\Analytics\` and local `YoutubeAutomation/output/` into `public/analytics/`, with `--auto-push` to git & Vercel
+- `scripts/sync_analytics.ps1`: One-command automated sync, commit, and push pipeline
+- `scripts/setup_windows_sync_task.ps1`: Configures resilient daily Windows Scheduled Task (`AmmiPortfolio-YouTubeSync` at 07:15 AM)
+- `YoutubeAutomation` Scheduler Hook: Connected to APScheduler in `app/services/auditor/scheduler.py` to auto-trigger portfolio sync immediately after 06:30 ET report generation
 
 ## Verification Status
 - Production Build: `npm run build` PASS (0 errors, 0 warnings).
-- Browser Subagent Live Verification: PASS (Verified 60s brief modal scroll lock, preventing background Lenis scroll bleed while maintaining smooth inner modal scrolling).
+- YouTube Telemetry Sync: PASS (80 snapshots, 685,036 views, 1,720 subscribers automatically committed and pushed to GitHub origin master).
+- Windows Scheduled Task: PASS (`AmmiPortfolio-YouTubeSync` scheduled daily at 07:15 AM).

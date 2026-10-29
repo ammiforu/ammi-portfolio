@@ -35,7 +35,8 @@ This project was built with a deep focus on **"Awwwards"-level aesthetics**, fea
 - **Magnetic UI Buttons:** Primary call-to-action buttons physically pull towards the user's cursor on hover for a tactile, luxury-web feel.
 - **3D Tilt Cards:** Skill cards and project showcases apply 3D `rotateX` and `rotateY` transforms based on mouse position.
 - **Data Visualization:** A responsive glowing radar chart that visualizes technical competencies across AI, Enterprise Architecture, Cloud, and Data.
-- **Live Media Analytics & Growth Chart:** Interactive Recharts area chart with multi-metric toggles, synced directly from YouTube reporting pipeline (43 consecutive daily snapshots).
+- **Live Media Analytics & Growth Chart:** Interactive Recharts area chart with multi-metric toggles, synced directly from YouTube reporting pipeline (80 consecutive daily snapshots tracking 685K+ views and 1,720+ subscribers).
+- **Automated Telemetry Sync & Deployment:** Triple-redundant auto-update pipeline combining `YoutubeAutomation` daily generation hooks (06:30 ET), Windows Scheduled Task (`AmmiPortfolio-YouTubeSync` daily at 07:15 AM), and Vercel edge-cached serverless API (`api/youtube-stats.ts`).
 - **Verified Career Timeline:** Accurate chronological timeline matching resume: 13+ years overall IT experience, including 7+ years in supply chain tech at GEODIS (IT Manager, Technical Lead, EDI Analyst) and AT&T (Hadoop Administrator).
 
 ## 🚀 Live Demo & Portal Details

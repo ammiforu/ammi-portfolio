@@ -1,24 +1,17 @@
 # sync_analytics.ps1
-# One command to sync your YouTube analytics to the live portfolio
-# Usage: .\scripts\sync_analytics.ps1
+# Fully automated sync of YouTube analytics to live portfolio & Vercel
+# Usage: powershell.exe -ExecutionPolicy Bypass -File .\scripts\sync_analytics.ps1
 
-$src = "G:\My Drive\Ammi Explains\Analytics\ammi_explain_daily.json"
-$dest = "$PSScriptRoot\..\public\analytics\ammi_explain_daily.json"
+$repoRoot = Resolve-Path "$PSScriptRoot\.."
+$pythonPath = Join-Path $repoRoot ".venv\Scripts\python.exe"
 
-Write-Host "🔄 Syncing YouTube analytics..." -ForegroundColor Cyan
-
-if (!(Test-Path $src)) {
-    Write-Host "❌ Source file not found: $src" -ForegroundColor Red
-    exit 1
+if (!(Test-Path $pythonPath)) {
+    # Fallback to system python
+    $pythonPath = "python"
 }
 
-Copy-Item $src -Destination $dest -Force
-Write-Host "✅ Analytics synced from Google Drive" -ForegroundColor Green
+$syncScript = Join-Path $repoRoot "scripts\sync_youtube_analytics.py"
 
-# Auto-commit and push
-Set-Location "$PSScriptRoot\.."
-git add public/analytics/ammi_explain_daily.json
-git commit -m "data: Sync YouTube analytics $(Get-Date -Format 'yyyy-MM-dd')"
-git push
-
-Write-Host "🚀 Pushed to GitHub! Vercel will auto-deploy in ~30s." -ForegroundColor Green
+Write-Host "🔄 Running automated YouTube Analytics sync pipeline..." -ForegroundColor Cyan
+& $pythonPath $syncScript --auto-push
+Write-Host "✅ Pipeline execution finished." -ForegroundColor Green

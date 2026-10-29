@@ -17,19 +17,42 @@ function useLiveAnalytics(): ChannelAnalytics | null {
   const [data, setData] = useState<ChannelAnalytics | null>(null);
 
   useEffect(() => {
-    fetch('/analytics/ammi_explain_daily.json')
-      .then(r => r.json())
-      .then(json => {
-        setData({
-          subscribers: json.channel?.subscribers ?? 0,
-          total_views: json.channel?.total_views ?? 0,
-          video_count: json.channel?.video_count ?? 0,
-          weekly_views: json.windows?.['7d']?.views ?? 0,
-          weekly_watch_hours: Math.round(json.windows?.['7d']?.watch_time_hours ?? 0),
-          generated_at: json.generated_at ?? '',
-        });
+    // Attempt live serverless API endpoint first
+    fetch('/api/youtube-stats')
+      .then(r => {
+        if (!r.ok) throw new Error('API not available');
+        return r.json();
       })
-      .catch(() => null);
+      .then(json => {
+        if (json && (json.total_views || json.subscribers)) {
+          setData({
+            subscribers: json.subscribers ?? 0,
+            total_views: json.total_views ?? 0,
+            video_count: json.video_count ?? 0,
+            weekly_views: json.weekly_views ?? 0,
+            weekly_watch_hours: Math.round(json.weekly_watch_hours ?? 0),
+            generated_at: json.generated_at ?? '',
+          });
+        } else {
+          throw new Error('Incomplete data');
+        }
+      })
+      .catch(() => {
+        // Fallback to static daily JSON file
+        fetch('/analytics/ammi_explain_daily.json')
+          .then(r => r.json())
+          .then(json => {
+            setData({
+              subscribers: json.channel?.subscribers ?? 0,
+              total_views: json.channel?.total_views ?? 0,
+              video_count: json.channel?.video_count ?? 0,
+              weekly_views: json.windows?.['7d']?.views ?? 0,
+              weekly_watch_hours: Math.round(json.windows?.['7d']?.watch_time_hours ?? 0),
+              generated_at: json.generated_at ?? '',
+            });
+          })
+          .catch(() => null);
+      });
   }, []);
 
   return data;

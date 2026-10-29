@@ -31,7 +31,7 @@ KEY TECHNICAL SKILLS:
 - Dev: React, TypeScript, Node.js, FastAPI, Python, SQL
 
 AI & PLATFORM PROJECTS:
-- YouTube AI Automation: @ammiexplains has 1,670+ subscribers, 624K+ total views. Solo-built pipeline.
+- YouTube AI Automation: @ammiexplains has 1,720+ subscribers, 685K+ total views. Solo-built pipeline.
 - Local AI Cluster: Deployed local LLM inference cluster
 - UIP (Unified Integration Portal): Enterprise operations and integration platform built solo
 

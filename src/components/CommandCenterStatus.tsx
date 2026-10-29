@@ -95,23 +95,37 @@ const SYSTEMS: SystemNode[] = [
     category: 'Autonomous Asset Network',
     status: 'active',
     uptime: 'Autonomous Daily',
-    metrics: '10 Channels · 625K+ Views',
+    metrics: '10 Channels · 685K+ Views',
     description: 'Automated digital media holding asset running end-to-end content generation, script synthesis, thumbnail generation, and daily telemetry sync.',
     technicalSpecs: {
       protocol: 'FastAPI / Python Async / Gemini & OpenAI APIs',
       throughput: 'Automated multi-account batch syndication',
       failover: 'Dual Google Drive & local redundancy',
-      monitoring: 'Daily telemetry archive with 43+ snapshots',
+      monitoring: 'Daily telemetry archive with 80+ snapshots',
     },
   },
 ];
 
 export const CommandCenterStatus: React.FC = () => {
   const [activeNode, setActiveNode] = useState<string | null>(null);
+  const [liveYtMetrics, setLiveYtMetrics] = useState<string>('10 Channels · 685K+ Views');
   const [time, setTime] = useState<{ utc: string; local: string }>({
     utc: '',
     local: '',
   });
+
+  useEffect(() => {
+    fetch('/analytics/ammi_explain_daily.json')
+      .then((r) => r.json())
+      .then((j) => {
+        const views = j.channel?.total_views;
+        if (views) {
+          const kViews = Math.floor(views / 1000);
+          setLiveYtMetrics(`10 Channels · ${kViews}K+ Views`);
+        }
+      })
+      .catch(() => null);
+  }, []);
 
   useEffect(() => {
     const updateTime = () => {
@@ -229,7 +243,7 @@ export const CommandCenterStatus: React.FC = () => {
                     <h4 className="text-lg font-bold font-syne text-white flex items-center gap-2">
                       <span>{selectedSystem.name}</span>
                       <span className="text-xs font-mono font-normal px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                        {selectedSystem.metrics}
+                        {selectedSystem.id === 'yt-pipeline' ? liveYtMetrics : selectedSystem.metrics}
                       </span>
                     </h4>
                     <p className="text-xs font-mono text-[#9496a8]">

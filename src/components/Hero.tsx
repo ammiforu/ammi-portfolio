@@ -26,10 +26,18 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
   const h = headlines[mode];
 
   useEffect(() => {
-    fetch('/analytics/ammi_explain_daily.json')
-      .then(r => r.json())
-      .then(j => setYtSubs(j.channel?.subscribers ?? 0))
-      .catch(() => null);
+    fetch('/api/youtube-stats')
+      .then(r => (r.ok ? r.json() : Promise.reject('API unavailable')))
+      .then(j => {
+        if (j.subscribers) setYtSubs(j.subscribers);
+        else throw new Error('No subs in API');
+      })
+      .catch(() => {
+        fetch('/analytics/ammi_explain_daily.json')
+          .then(r => r.json())
+          .then(j => setYtSubs(j.channel?.subscribers ?? 0))
+          .catch(() => null);
+      });
   }, []);
   const { scrollYProgress } = useScroll({
     target: containerRef,

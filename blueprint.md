@@ -50,5 +50,10 @@ Luxury editorial portfolio and interactive technical showcase for Ammi Reddy Tet
 - **Magnetic UI**: Framer Motion powered buttons that attract to cursor hover.
 - **3D Tilt Cards**: Glassmorphism cards with `rotateX` and `rotateY` tracking.
 - **Data Visualization**: Recharts Radar Chart for technical competencies.
-- **Live YouTube Telemetry Chart**: Interactive Recharts area chart with metric toggles, synced from Google Drive JSON (`ammi_explain_daily.json` & Archive, 43 continuous daily snapshots).
+- **Live YouTube Telemetry Chart**: Interactive Recharts area chart with metric toggles, synced from Google Drive & local output (`ammi_explain_daily.json` & Archive, 80 continuous daily snapshots tracking 685K+ views and 1,720+ subscribers).
+- **Automated YouTube Telemetry Pipeline**:
+  - Daily scheduled trigger via `YoutubeAutomation` APScheduler at 06:30 ET
+  - Independent Windows Scheduled Task (`AmmiPortfolio-YouTubeSync`) at 07:15 AM
+  - Vercel Serverless Function `api/youtube-stats.ts` providing live edge-cached YouTube Data API integration
+  - Auto-commit & auto-push pipeline deploying updates to Vercel within 30 seconds
 - **Verified Career Timeline**: 4-role chronological progression matching resume (GEODIS IT Manager, Technical Lead, EDI Analyst, and AT&T Hadoop Administrator).
