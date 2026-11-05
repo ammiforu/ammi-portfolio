@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-04T13:15:08.860267+00:00",
-  "total_days": 86,
+  "updated_at": "2026-11-05T11:30:40.623824+00:00",
+  "total_days": 87,
   "history": [
     {
       "date": "2026-08-10",
@@ -771,10 +771,19 @@
       "date": "2026-11-04",
       "subscribers": 1730,
       "total_views": 687792,
-      "weekly_views": 2301,
-      "weekly_watch_hours": 29.2,
-      "monthly_views": 22186,
+      "weekly_views": 2805,
+      "weekly_watch_hours": 33.8,
+      "monthly_views": 22690,
       "displayDate": "Nov 04"
+    },
+    {
+      "date": "2026-11-05",
+      "subscribers": 1730,
+      "total_views": 688122,
+      "weekly_views": 2495,
+      "weekly_watch_hours": 29.8,
+      "monthly_views": 22293,
+      "displayDate": "Nov 05"
     }
   ]
 }
