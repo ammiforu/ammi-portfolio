@@ -46,7 +46,8 @@ Luxury editorial portfolio and interactive technical showcase for Ammi Reddy Tet
 - **Direct Google Calendar Booking**: One-click 30-min conversation scheduling via `https://calendar.app.google/FkHk6NzDGzwhXEBn8`.
 - **Recruiter Perspective Toggle**: Switch between "Enterprise IT Leader" and "AI Architect" perspectives in the navbar.
 - **Currently Working On Live Ticker**: Real-time project activity ticker displayed below the Hero status badge.
-- **Particle Background**: `react-tsparticles` constellation effect reacting to cursor.
+- **Three.js Cybernetic Constellation & Neural Field (`ThreeBackground.tsx`)**: WebGL GPU-accelerated 3D particle constellation and dynamic line network with mouse parallax, floor grid helper, and intersection-based performance culling.
+- **3D Global Architecture & Supply Chain Globe (`GlobalArchitectureGlobe.tsx`)**: Interactive Three.js WebGL globe showing Ammi's global operations (Franklin TN HQ, India global team, Europe/West Coast/Midwest/APAC hubs) with 3D bezier arcs, animated data packets, incident simulator reactivity, and interactive drag-to-orbit controls.
 - **Magnetic UI**: Framer Motion powered buttons that attract to cursor hover.
 - **3D Tilt Cards**: Glassmorphism cards with `rotateX` and `rotateY` tracking.
 - **Data Visualization**: Recharts Radar Chart for technical competencies.

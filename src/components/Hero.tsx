@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Sparkles } from 'lucide-react';
-import { ParticleBackground } from './ParticleBackground';
+import { ThreeBackground } from './ThreeBackground';
 import { Magnetic } from './Magnetic';
 import { AnimatedCounter } from './AnimatedCounter';
 import { LiveTicker } from './LiveTicker';
@@ -54,8 +54,8 @@ export const Hero: React.FC<HeroProps> = ({ onConnectClick, onWorkClick, onOpenB
       className="relative w-full h-screen bg-[var(--bg-dark)] text-[#f4f4f6] overflow-hidden flex flex-col justify-between"
       id="hero"
     >
-      {/* Particle Background */}
-      <ParticleBackground />
+      {/* Three.js 3D Cybernetic Neural & Constellation Field */}
+      <ThreeBackground />
 
       {/* Background Subtle Ambient Lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--accent-cyan)]/10 rounded-full blur-[160px] pointer-events-none" />

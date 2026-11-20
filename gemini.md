@@ -14,22 +14,16 @@
 
 ## Key Stack & Architecture
 - **Vite + React 19 + TypeScript + Tailwind CSS v4**
+- **Three.js (r186) + WebGL GPU Acceleration**
 - **GSAP + ScrollTrigger + Lenis Smooth Scroll**
 - **Vercel Web Analytics**: `@vercel/analytics/react` for silent real-time visitor telemetry
 - **360° Hero Turntable Engine**: 32 high-resolution WebP frames extracted and rendered from Ammi's real photographic turnaround reference sheet
 - **Serverless AI Proxy**: `api/chat.ts` (Vercel Serverless Function) keeping `GEMINI_API_KEY` secure server-side
 - **Components**:
   - `Hero.tsx`: Pinned ScrollTrigger 360° rotation centerpiece, streamlined CTAs, Executive Audio Player, LiveTicker & 60s Brief trigger
-  - `ExecutiveAudioPlayer.tsx`: 45-Second Executive Audio Brief with real-time dynamic frequency waveform bars and accessible transcript drawer
-  - `CommandCenterStatus.tsx`: Real-time Bloomberg-style infrastructure health bar with dual clocks (CT & UTC), 5 enterprise clusters (IBM Sterling, IBM MQ, Manhattan WMS, UIP — Unified Integration Portal, YouTube AI) and expandable architecture drawers
-  - `ExecutiveBriefModal.tsx`: 60-Second Executive Recruiter Dossier modal with verified career summary, vital stats, target roles, and one-click action center (PDF resume, Google Meet 30-min, LinkedIn, direct email)
-  - `AIChat.tsx`: Non-overlapping docked floating AI assistant with fast-path FAQ knowledge base & secure Gemini API proxy
-  - `Navbar.tsx`: Glass sticky header, Recruiter Mode Toggle, 60s Brief button, & mobile fullscreen overlay menu
-  - `About.tsx`: GEODIS 14-person global team (US & India), 7+ years supply chain tech, real photo badge
-  - `Marquee.tsx`: Refined horizontal competency ticker
-  - `Projects.tsx`: High-visibility illuminated showcases with full-color clarity, custom focal framing, and deep-dive case study dossier triggers
-  - `ProjectDossierModal.tsx`: Comprehensive case study postmortem drawers for all 4 core projects (challenge, solution, architecture, metrics, and production code blocks)
-  - `SystemArchitecture.tsx`: Interactive Enterprise Topology & Incident Simulator covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and UIP (Unified Integration Portal) with live incident injection
+  - `ThreeBackground.tsx`: GPU-accelerated Three.js WebGL 3D cybernetic constellation and wave field with dynamic lines and mouse parallax
+  - `GlobalArchitectureGlobe.tsx`: Interactive Three.js 3D supply chain & B2B integration globe connecting Franklin HQ, India team, and global partner hubs with live incident-reactive photon packet arcs
+  - `SystemArchitecture.tsx`: Interactive Enterprise Topology & Incident Simulator integrated with 3D Global Architecture Globe, covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and UIP
   - `EnterpriseCalculator.tsx`: Real-time interactive slider quantifying engineering hours saved (70% triage cut) and dollar value delivered with Google Calendar strategy booking
   - `Skills.tsx`: Verified competencies: EDI (X12/EDIFACT), IBM MQ, Python, Bash, ASP.NET Core, Hadoop, Linux, Grafana
   - `Services.tsx`: Client-focused enterprise architecture & automation offerings

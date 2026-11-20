@@ -20,6 +20,7 @@ This project was built with a deep focus on **"Awwwards"-level aesthetics**, fea
 
 ## ✨ Key Features & Interactions
 
+- **3D Global Architecture & Supply Chain Globe:** Interactive Three.js WebGL globe mapping 500+ Trading Partners across the US, India global engineering team, Europe, and APAC hubs with real-time 3D bezier transaction arcs, packet flows, and interactive incident injection.
 - **Interactive Architecture & Incident Simulator:** Visual enterprise topology map covering 500+ Trading Partners, IBM Sterling B2B, IBM MQ, Manhattan WMS, and UIP (Unified Integration Portal) with live incident injection buttons (simulate MQ TLS certificate expiration recovery, 856 ASN mismatch reconciliation, and Black Friday volume surges).
 - **Enterprise ROI & Automation Calculator:** Real-time interactive slider quantifying engineering hours saved (70% triage cut) and dollar value delivered ($400K+ annual savings) with one-click Google Calendar strategy booking.
 - **45-Second Executive Audio Intro:** Luxury audio player in the hero section featuring dynamic frequency waveform bars and crystal-clear voice introduction with accessible transcript drawer.
@@ -31,7 +32,7 @@ This project was built with a deep focus on **"Awwwards"-level aesthetics**, fea
 - **Google Calendar Direct Booking:** Instant 30-minute conversation scheduling via Google Calendar appointment system (`https://calendar.app.google/FkHk6NzDGzwhXEBn8`).
 - **Recruiter Perspective Toggle:** Switch between "Enterprise IT Leader" and "AI Architect" perspectives in real time.
 - **Live Activity Ticker:** Dynamic ticker tracking active enterprise infrastructure and AI projects.
-- **Particle Background:** A floating constellation effect that reacts to cursor movement and clicks, cementing a "cyber/AI" aesthetic.
+- **Three.js Cybernetic Constellation & Neural Field:** High-performance WebGL 3D constellation grid with GPU buffer geometry, dynamic line segment connections, floor grid helper, and smooth 3D mouse parallax tracking.
 - **Magnetic UI Buttons:** Primary call-to-action buttons physically pull towards the user's cursor on hover for a tactile, luxury-web feel.
 - **3D Tilt Cards:** Skill cards and project showcases apply 3D `rotateX` and `rotateY` transforms based on mouse position.
 - **Data Visualization:** A responsive glowing radar chart that visualizes technical competencies across AI, Enterprise Architecture, Cloud, and Data.

@@ -4,6 +4,7 @@ import {
   Server, Shield, RefreshCw, AlertTriangle, CheckCircle2, 
   ArrowRight, Activity, Layers, Cpu
 } from 'lucide-react';
+import { GlobalArchitectureGlobe } from './GlobalArchitectureGlobe';
 
 interface TopologyNode {
   id: string;
@@ -174,6 +175,9 @@ export const SystemArchitecture: React.FC = () => {
             </button>
           </div>
         </div>
+
+        {/* 3D WebGL Global Architecture & Supply Chain Globe */}
+        <GlobalArchitectureGlobe scenario={activeScenario} />
 
         {/* Main Topology Diagram Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 relative">
